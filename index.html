@@ -2,9 +2,9 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Air Root — Прикорневой объём для тонких волос</title>
-    <meta name="description" content="Авторская техника Air Root. Стойкий прикорневой объём до 6 недель. Бережный уход за тонкими волосами.">
+    <meta name="description" content="Авторская техника Air Root. Стойкий прикорневой объём до 6 недель.">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&amp;family=Prata&display=swap" rel="stylesheet">
@@ -14,7 +14,8 @@
 </head>
 <body>
     <div id="siteContainer">
-        <!-- Header -->
+
+        <!-- HEADER -->
         <header>
             <div class="logo-container">
                 <div class="logo-icon"><i class="fa-solid fa-feather"></i></div>
@@ -27,7 +28,7 @@
             </nav>
         </header>
 
-        <!-- Hero -->
+        <!-- HERO -->
         <div class="hero">
             <div class="hero-content">
                 <div class="hero-badge">
@@ -107,45 +108,4 @@
                 <div class="process-step"><div class="step-circle"><i class="fa-solid fa-pump-soap"></i></div><div class="step-label">Подготовка</div></div>
                 <div class="process-step"><div class="step-circle"><i class="fa-solid fa-paintbrush"></i></div><div class="step-label">Нанесение</div></div>
                 <div class="process-step"><div class="step-circle"><i class="fa-solid fa-pause"></i></div><div class="step-label">Выдержка</div></div>
-                <div class="process-step"><div class="step-circle"><i class="fa-solid fa-droplet"></i></div><div class="step-label">Смывка</div></div>
-                <div class="process-step"><div class="step-circle"><i class="fa-solid fa-wind"></i></div><div class="step-label">Укладка</div></div>
-            </div>
-        </div>
-
-        <!-- Уход -->
-        <div class="referral-section">
-            <div class="ref-title"><i class="fa-solid fa-heart"></i> Рекомендую для домашнего ухода</div>
-            <div class="ref-links">
-                <a href="#" class="ref-link-card"><i class="fa-solid fa-droplet"></i><span>Сыворотка для объёма</span></a>
-                <a href="#" class="ref-link-card"><i class="fa-solid fa-jar"></i><span>Шампунь для тонких волос</span></a>
-                <a href="#" class="ref-link-card"><i class="fa-solid fa-spray-can"></i><span>Текстурирующий спрей</span></a>
-            </div>
-        </div>
-
-        <!-- Запись -->
-        <div class="booking" id="order">
-            <div class="section-header"><i class="fa-solid fa-paper-plane"></i><h2>Записаться</h2></div>
-            <form id="telegramForm">
-                <div class="form-group"><label>Имя</label><input type="text" id="name" placeholder="Анна" required></div>
-                <div class="form-group"><label>Телефон</label><input type="tel" id="phone" placeholder="+7 (___) ___-__-__" required></div>
-                <div class="form-group"><label>Удобное время</label><input type="text" id="time" placeholder="Будни после 12:00"></div>
-                <button type="button" onclick="sendForm()">Отправить заявку</button>
-            </form>
-            <div class="success-message" id="successMessage">Заявка отправлена! Я скоро свяжусь с вами ❤️</div>
-        </div>
-
-        <footer>
-            <p><i class="fa-solid fa-feather"></i> Air Root • авторская студия • 2026</p>
-        </footer>
-    </div>
-
-    <script>
-        function sendForm() {
-            const name = document.getElementById('name').value;
-            if (!name) return alert('Введите имя');
-            document.getElementById('successMessage').style.display = 'block';
-            setTimeout(() => alert('Заявка принята! Я свяжусь с вами в ближайшее время.'), 800);
-        }
-    </script>
-</body>
-</html>
+                <div class="process-step"><div class="step-circle"><i class="fa-solid fa
