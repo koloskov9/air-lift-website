@@ -196,37 +196,32 @@ nav a.active {
     margin-bottom: 30px;
 }
 
-.feature-card {
-    background: rgba(255,255,255,0.8);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(198,156,109,0.15);
-    padding: 20px 10px;
-    border-radius: 20px;
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.02);
-    transition: transform 0.3s, box-shadow 0.3s;
+.feature-card, .process-step, .ref-link-card {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 20px 35px rgba(0,0,0,0.05);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 25px 50px -12px rgba(198,156,109,0.25);
 }
 
-.feature-icon {
-    font-size: 34px;
-    margin-bottom: 10px;
+/* Glassmorphism + глубина */
+.problem-block, .booking, .referral-section {
+    background: rgba(255, 253, 249, 0.85);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(198,156,109,0.2);
 }
 
-.feature-title {
-    font-weight: 600;
-    font-size: 16px;
-    color: #3a2c1c;
+/* Плавное появление */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.feature-subtitle {
-    font-size: 13px;
-    color: #7a5c3e;
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* === ПРОЦЕСС === */
