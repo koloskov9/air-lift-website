@@ -14,8 +14,13 @@ h1, h2, h3, .logo-text strong, .section-header h2 {
 }
 
 h1 {
-    font-size: 48px;
-    letter-spacing: -0.5px;
+    font-family: 'Prata', serif;
+    font-weight: 400;
+    font-size: 52px;            /* крупно, но не кричит */
+    letter-spacing: 1px;        /* лёгкий воздух между буквами */
+    word-spacing: 4px;
+    color: #3a2c1c;
+    line-height: 1.2;
     margin-bottom: 10px;
 }
 
