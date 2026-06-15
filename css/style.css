@@ -6,16 +6,13 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
-    background: linear-gradient(135deg, #fdfbf7 0%, #f4ede4 100%);
-    color: #3a2c1c;
-    line-height: 1.6;
-    min-height: 100vh;
+    font-family: 'Raleway', sans-serif;
+    ...
 }
 
 h1, h2, h3, .logo-text strong, .section-header h2 {
-    font-family: 'Cormorant Garamond', serif;
-    font-weight: 600;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
 h1 {
