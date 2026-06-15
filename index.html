@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Air Lift — Прикорневой объём для тонких волос</title>
-    <meta name="description" content="Прикорневой объём в авторской технике Air Lift.">
+    <title>Air Root — Прикорневой объём для тонких волос</title>
+    <meta name="description" content="Прикорневой объём в авторской технике Air Root.">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/admin.css">
@@ -16,7 +16,7 @@
         <header>
             <div class="logo-container" id="openAdminBtn">
                 <div class="logo-icon"><i class="fa-solid fa-feather"></i></div>
-                <div class="logo-text">авторская студия<br><strong>Air Lift</strong></div>
+                <div class="logo-text">авторская студия<br><strong>Air Root</strong></div>
             </div>
             <h1>прикорневой<br><strong>объём</strong></h1>
             <p class="subhead"><i class="fa-solid fa-star"></i> для девушек 22–45 с тонкими волосами <i class="fa-solid fa-star"></i></p>
@@ -34,7 +34,7 @@
         </div>
 
         <div class="technique">
-            <div class="section-header"><i class="fa-solid fa-wand-magic-sparkles"></i><h2>Авторская техника Air Lift</h2></div>
+            <div class="section-header"><i class="fa-solid fa-wand-magic-sparkles"></i><h2>Авторская техника Air Root</h2></div>
             <div class="feature-grid">
                 <div class="feature-card"><span class="feature-icon">💇‍♀️</span><div class="feature-title">Шпильки + состав</div><div class="feature-subtitle">особая постановка</div></div>
                 <div class="feature-card"><span class="feature-icon">✨</span><div class="feature-title">До 6 недель</div><div class="feature-subtitle">стойкий результат</div></div>
@@ -73,17 +73,26 @@
 
         <div class="booking" id="order">
             <div class="section-header"><i class="fa-solid fa-paper-plane"></i><h2>Записаться на услугу</h2></div>
-            <form id="telegramForm">
-                <div class="form-group"><label><i class="fa-solid fa-user"></i> Имя</label><input type="text" id="name" placeholder="Анна" required></div>
-                <div class="form-group"><label><i class="fa-solid fa-phone"></i> Telegram / Телефон</label><input type="text" id="contact" placeholder="@username или +7..." required></div>
-                <div class="form-group"><label><i class="fa-solid fa-message"></i> Пожелания</label><textarea id="message" rows="2" placeholder="Желаемая дата, вопросы..."></textarea></div>
+            <!-- Новая форма, отправляющая заявки через Google Apps Script -->
+            <form id="telegramForm" action="https://script.google.com/macros/s/AKfycbyB0OX3bIkljYPc811YMBvCPEVmsxMnvV6DCTYZSJeV1DDJIgQ8UULtNv8vU8-bPfOL/exec" method="POST">
+                <div class="form-group"><label><i class="fa-solid fa-user"></i> Имя</label><input type="text" name="name" placeholder="Анна" required></div>
+                <div class="form-group"><label><i class="fa-solid fa-phone"></i> Телефон</label><input type="tel" name="phone" placeholder="+7..." required></div>
+                <div class="form-group"><label><i class="fa-solid fa-clock"></i> Удобное время</label><input type="text" name="time" placeholder="Любое"></div>
+                <div class="form-group">
+                    <label><i class="fa-solid fa-tag"></i> Тип заявки</label>
+                    <select name="type" required>
+                        <option value="Запись на процедуру">Запись на процедуру</option>
+                        <option value="Обучение Air Root">Обучение Air Root</option>
+                        <option value="Вопрос по уходу">Вопрос по уходу</option>
+                    </select>
+                </div>
                 <button type="submit"><i class="fa-solid fa-paper-plane"></i> Отправить заявку</button>
                 <div class="success-message" id="successMessage"><i class="fa-solid fa-circle-check"></i> Заявка отправлена! Я свяжусь с вами</div>
             </form>
         </div>
 
         <footer>
-            <div><i class="fa-solid fa-feather"></i> Air Lift • авторская студия • 2026</div>
+            <div><i class="fa-solid fa-feather"></i> Air Root • авторская студия • 2026</div>
             <div class="footer-sub"><i class="fa-solid fa-heart"></i> бережный подход к тонким волосам</div>
         </footer>
     </div>
@@ -93,8 +102,7 @@
         <div id="adminPanel"></div>
     </div>
 
-    <!-- Подключаем конфиг (config.js должен быть создан локально) -->
-    <script src="config.js"></script>
+    <!-- Скрипты: проверьте, что в js/main.js удалён старый обработчик отправки формы telegramForm -->
     <script src="js/main.js"></script>
     <script src="js/admin.js"></script>
 </body>
