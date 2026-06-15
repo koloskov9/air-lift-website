@@ -5,146 +5,65 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Обучение Air Root — Стань мастером прикорневого объёма</title>
     <meta name="description" content="Авторский курс по технике Air Root. Обучение с нуля, практика на моделях, поддержка после курса.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪶</text></svg>">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
-        /* Минимальные дополнительные стили для страницы обучения */
-        .training-hero {
-            text-align: center;
-            padding: 40px 20px 30px;
-            background: #f9f5f0;
-            border-radius: 0 0 30px 30px;
-        }
-        .training-hero h1 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-        .training-hero p {
-            font-size: 18px;
-            color: #555;
-            max-width: 500px;
-            margin: 0 auto;
-        }
-        .program-block {
-            padding: 30px 20px;
-        }
-        .program-block h2 {
-            text-align: center;
-            margin-bottom: 25px;
-        }
-        .program-list {
-            list-style: none;
-            padding: 0;
-            max-width: 400px;
-            margin: 0 auto 30px;
-        }
-        .program-list li {
-            display: flex;
-            align-items: baseline;
-            gap: 10px;
-            margin-bottom: 15px;
-            font-size: 16px;
-        }
-        .program-list i {
-            color: #d4a373;
-            width: 20px;
-            text-align: center;
-        }
-        .price-block {
-            background: #fff;
-            border-radius: 20px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-            margin: 0 20px 30px;
-        }
-        .price-tag {
-            font-size: 36px;
-            font-weight: bold;
-            color: #d4a373;
-            margin: 10px 0;
-        }
-        .btn-training {
-            display: inline-block;
-            background: #d4a373;
-            color: #fff;
-            padding: 16px 40px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: bold;
-            border: none;
-            cursor: pointer;
-            margin: 20px 0;
-        }
-    </style>
 </head>
 <body>
     <div id="siteContainer">
-        <!-- Шапка с меню (можно будет потом унифицировать через JS, пока сделаем здесь) -->
         <header>
             <div class="logo-container">
                 <div class="logo-icon"><i class="fa-solid fa-feather"></i></div>
                 <div class="logo-text">авторская студия<br><strong>Air Root</strong></div>
             </div>
-            <nav style="margin-top: 15px; display: flex; gap: 20px; justify-content: center; flex-wrap: wrap;">
-                <a href="index.html" style="color: #555; text-decoration: none; font-weight: bold;"><i class="fa-solid fa-wand-magic-sparkles"></i> Услуга</a>
-                <a href="training.html" style="color: #d4a373; text-decoration: none; font-weight: bold;"><i class="fa-solid fa-graduation-cap"></i> Обучение</a>
-                <a href="products.html" style="color: #555; text-decoration: none; font-weight: bold;"><i class="fa-solid fa-droplet"></i> Уход</a>
+            <nav>
+                <a href="index.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Услуга</a>
+                <a href="training.html" class="active"><i class="fa-solid fa-graduation-cap"></i> Обучение</a>
+                <a href="products.html"><i class="fa-solid fa-droplet"></i> Уход</a>
             </nav>
         </header>
 
-        <!-- Герой-секция -->
-        <div class="training-hero">
-            <h1>Обучение технике Air Root</h1>
-            <p>Станьте востребованным мастером по прикорневому объёму. Авторский курс с практикой и поддержкой.</p>
+        <div class="hero-img" style="background: linear-gradient(120deg, #d4c5b9, #fce4d6);">
+            <div class="hero-badge"><i class="fa-solid fa-graduation-cap"></i> обучение</div>
         </div>
 
-        <!-- Что входит в обучение -->
-        <div class="program-block">
+        <h1 style="text-align:center;">Стань мастером<br><strong>Air Root</strong></h1>
+        <p style="text-align:center; font-size: 16px; color: #7a5c3e; margin-bottom: 30px;">
+            Авторский курс с практикой и сопровождением
+        </p>
+
+        <div class="problem-block">
             <h2><i class="fa-solid fa-list-check"></i> Программа курса</h2>
-            <ul class="program-list">
-                <li><i class="fa-solid fa-circle-check"></i> Теоретическая база: строение волоса, составы</li>
-                <li><i class="fa-solid fa-circle-check"></i> Постановка шпилек и техника нанесения</li>
-                <li><i class="fa-solid fa-circle-check"></i> Отработка на 2 моделях (предоставляются)</li>
-                <li><i class="fa-solid fa-circle-check"></i> Разбор ошибок и критерии качества</li>
-                <li><i class="fa-solid fa-circle-check"></i> Фото- и видеосопровождение до/после</li>
-                <li><i class="fa-solid fa-circle-check"></i> Бонус: чек-лист по домашнему уходу для клиентов</li>
+            <ul class="problem-list" style="list-style: none;">
+                <li><i class="fa-solid fa-circle-check" style="color: #c69c6d;"></i> Теория: строение волоса, составы</li>
+                <li><i class="fa-solid fa-circle-check" style="color: #c69c6d;"></i> Постановка шпилек и работа с зонами</li>
+                <li><i class="fa-solid fa-circle-check" style="color: #c69c6d;"></i> Практика на 2 моделях</li>
+                <li><i class="fa-solid fa-circle-check" style="color: #c69c6d;"></i> Фото- и видеосопровождение</li>
+                <li><i class="fa-solid fa-circle-check" style="color: #c69c6d;"></i> Разбор ошибок и сертификация</li>
+                <li><i class="fa-solid fa-circle-check" style="color: #c69c6d;"></i> Бонус: чек-лист по домашнему уходу для клиентов</li>
             </ul>
         </div>
 
-        <!-- Стоимость и формат -->
-        <div class="price-block">
-            <h2>Формат и стоимость</h2>
-            <p><i class="fa-solid fa-clock"></i> Длительность: 1 день (6–7 часов с перерывом)</p>
-            <p><i class="fa-solid fa-user-graduate"></i> Индивидуально или в мини-группе (до 2 человек)</p>
-            <div class="price-tag">15 000 ₽</div>
-            <p style="color: #888;">*возможна рассрочка, уточняйте в заявке</p>
-            <!-- Форма заявки на обучение -->
+        <div class="booking" style="background: rgba(255,255,255,0.6); backdrop-filter: blur(15px);">
+            <div class="section-header"><i class="fa-solid fa-tag"></i><h2>Стоимость и запись</h2></div>
+            <p style="text-align:center; font-size: 28px; font-weight: bold; color: #c69c6d; margin: 10px 0;">15 000 ₽</p>
+            <p style="text-align:center; color: #888; font-size: 14px;">1 день (6–7 часов) • индивидуально</p>
             <form id="trainingForm" action="https://script.google.com/macros/s/AKfycbyrOPILsOvtzQesbO7XmAyLuJtVeS8jnEHJMzhvH8bzNcdlOUy_-w-eUeD7v7YxPclK/exec" method="GET" target="_blank">
                 <input type="hidden" name="type" value="Обучение Air Root">
-                <div style="display: flex; flex-direction: column; gap: 12px; max-width: 350px; margin: 20px auto 0;">
-                    <input type="text" name="name" placeholder="Ваше имя" required style="padding: 12px; border-radius: 10px; border: 1px solid #ddd;">
-                    <input type="tel" name="phone" placeholder="Телефон" required style="padding: 12px; border-radius: 10px; border: 1px solid #ddd;">
-                    <input type="text" name="time" placeholder="Удобное время для связи" style="padding: 12px; border-radius: 10px; border: 1px solid #ddd;">
-                    <button type="submit" class="btn-training"><i class="fa-solid fa-paper-plane"></i> Отправить заявку</button>
-                </div>
+                <div class="form-group"><label>Имя</label><input type="text" name="name" placeholder="Анна" required></div>
+                <div class="form-group"><label>Телефон</label><input type="tel" name="phone" placeholder="+7..." required></div>
+                <div class="form-group"><label>Удобное время для связи</label><input type="text" name="time" placeholder="После 18:00"></div>
+                <button type="submit"><i class="fa-solid fa-paper-plane"></i> Отправить заявку</button>
             </form>
-            <p style="font-size: 13px; color: #888; margin-top: 10px;">После отправки я свяжусь с вами для уточнения деталей</p>
+            <p style="text-align:center; font-size: 13px; color: #888; margin-top: 12px;">Я свяжусь с вами, чтобы обсудить детали</p>
         </div>
 
-        <!-- Отзывы (можно пока оставить заглушку) -->
-        <div style="text-align: center; padding: 20px; color: #aaa;">
-            <p><i class="fa-solid fa-star"></i> Отзывы учеников скоро появятся</p>
-        </div>
-
-        <footer style="text-align: center; padding: 30px 20px; background: #f9f5f0; margin-top: 30px; border-radius: 30px 30px 0 0;">
+        <footer>
             <div><i class="fa-solid fa-feather"></i> Air Root • авторская студия • 2026</div>
-            <div style="font-size: 13px; color: #888;"><i class="fa-solid fa-heart"></i> бережный подход к тонким волосам</div>
+            <div class="footer-sub"><i class="fa-solid fa-heart"></i> бережный подход к тонким волосам</div>
         </footer>
     </div>
 </body>
