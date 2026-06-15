@@ -94,3 +94,40 @@ body {
 .feature-card:hover {
     border-color: #c69c6d;
     transform: translateY(-10
+
+ /* === СПЕЦИАЛЬНО ДЛЯ TRAINING.HTML === */
+.program-list {
+    list-style: none;
+    margin: 20px 0;
+}
+
+.program-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid #f0e6d8;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15.5px;
+}
+
+.program-list li:last-child {
+    border-bottom: none;
+}
+
+.program-list li i {
+    color: #c69c6d;
+    font-size: 18px;
+}
+
+/* Улучшение process-steps для обучения */
+.process-steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+}
+
+@media (min-width: 480px) {
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}                         
