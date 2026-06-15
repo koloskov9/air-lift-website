@@ -9,8 +9,8 @@ body {
 }
 
 h1, h2, h3, .logo-text strong, .section-header h2 {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
+    font-family: 'Prata', serif;
+    font-weight: 400; /* Prata не имеет жирных начертаний, это нормально */
 }
 
 h1 {
