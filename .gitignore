@@ -1,15 +1,6 @@
-# Telegram конфиг с токеном
+# Конфиг с токеном
 config.js
 
 # Системные файлы
 .DS_Store
 Thumbs.db
-
-# Редакторы
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Логи
-*.log
