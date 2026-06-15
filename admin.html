@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Админ-панель • Air Lift</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔐</text></svg>">
+</head>
+<body>
+    <div class="admin-container">
+        <!-- Экран входа -->
+        <div id="loginScreen" class="login-screen">
+            <div class="login-card">
+                <div class="login-icon">
+                    <i class="fa-solid fa-lock"></i>
+                </div>
+                <h1>Админ-панель</h1>
+                <p>Введите пароль для доступа к заявкам</p>
+                <form id="loginForm">
+                    <div class="input-group">
+                        <i class="fa-solid fa-key"></i>
+                        <input 
+                            type="password" 
+                            id="passwordInput" 
+                            placeholder="Пароль" 
+                            required
+                            autocomplete="current-password"
+                        >
+                    </div>
+                    <button type="submit">
+                        <i class="fa-solid fa-right-to-bracket"></i> Войти
+                    </button>
+                    <p id="loginError" class="error-message"></p>
+                </form>
+            </div>
+        </div>
+
+        <!-- Основной интерфейс (скрыт до входа) -->
+        <div id="mainScreen" class="main-screen" style="display: none;">
+            <!-- Верхняя панель -->
+            <header class="admin-header">
+                <div class="header-left">
+                    <i class="fa-solid fa-feather"></i>
+                    <span>Air Lift • Заявки</span>
+                </div>
+                <div class="header-right">
+                    <button id="refreshBtn" class="icon-btn" title="Обновить">
+                        <i class="fa-solid fa-rotate"></i>
+                    </button>
+                    <button id="logoutBtn" class="icon-btn" title="Выйти">
+                        <i class="fa-solid fa-right-from-bracket"></i>
+                    </button>
+                </div>
+            </header>
+
+            <!-- Статистика -->
+            <div class="stats-bar">
+                <div class="stat">
+                    <span class="stat-number" id="totalCount">0</span>
+                    <span class="stat-label">всего заявок</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="todayCount">0</span>
+                    <span class="stat-label">сегодня</span>
+                </div>
+            </div>
+
+            <!-- Список заявок -->
+            <div id="requestsList" class="requests-list">
+                <div class="empty-state">
+                    <i class="fa-solid fa-inbox"></i>
+                    <p>Заявок пока нет</p>
+                </div>
+            </div>
+
+            <!-- Индикатор загрузки -->
+            <div id="loader" class="loader" style="display: none;">
+                <i class="fa-solid fa-spinner fa-spin"></i> Загрузка...
+            </div>
+        </div>
+    </div>
+
+    <!-- Скрипты -->
+    <script src="config.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
