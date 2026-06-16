@@ -2,77 +2,58 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Уход для волос — Рекомендации Air Root</title>
-    <meta name="description" content="Проверенные средства для прикорневого объёма и ухода за тонкими волосами. Партнёрские ссылки от мастера.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Продукты для домашнего ухода — Air Root</title>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪶</text></svg>">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <div id="siteContainer">
+    <div class="container">
+        
         <header>
-            <div class="logo-container">
-                <div class="logo-icon"><i class="fa-solid fa-feather"></i></div>
-                <div class="logo-text">авторская студия<br><strong>Air Root</strong></div>
+            <div class="logo">
+                <i class="fas fa-feather-alt"></i>
+                <div class="logo-text">Air <strong>Root</strong></div>
             </div>
             <nav>
-                <a href="index.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Услуга</a>
-                <a href="training.html"><i class="fa-solid fa-graduation-cap"></i> Обучение</a>
-                <a href="products.html" class="active"><i class="fa-solid fa-droplet"></i> Уход</a>
+                <a href="index.html">Главная</a>
+                <a href="products.html">Продукты</a>
+                <a href="training.html">Обучение</a>
+                <a href="index.html#booking">Запись</a>
             </nav>
         </header>
 
-        <h1 style="text-align:center;">Мои любимые<br><strong>средства для объёма</strong></h1>
-        <p style="text-align:center; font-size: 16px; color: #7a5c3e; margin-bottom: 30px;">
-            Проверено лично — подходит для тонких волос после процедуры
-        </p>
-
-        <div class="referral-section" style="margin: 20px 0;">
-            <div class="ref-links">
-                <!-- Товар 1 -->
-                <a href="https://example.com/ref1" target="_blank" rel="noopener noreferrer" class="ref-link-card">
-                    <i class="fa-solid fa-droplet"></i>
-                    <span class="ref-link-text">Сыворотка для прикорневого объёма</span>
-                    <span class="ref-link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-                <!-- Товар 2 -->
-                <a href="https://example.com/ref2" target="_blank" rel="noopener noreferrer" class="ref-link-card">
-                    <i class="fa-solid fa-jar"></i>
-                    <span class="ref-link-text">Шампунь для тонких волос</span>
-                    <span class="ref-link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-                <!-- Товар 3 -->
-                <a href="https://example.com/ref3" target="_blank" rel="noopener noreferrer" class="ref-link-card">
-                    <i class="fa-solid fa-spray-can"></i>
-                    <span class="ref-link-text">Текстурирующий спрей</span>
-                    <span class="ref-link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                </a>
-                <!-- Товар 4 (добавим для полноты) -->
-                <a href="https://example.com/ref4" target="_blank" rel="noopener noreferrer" class="ref-link-card">
-                    <i class="fa-solid fa-wind"></i>
-                    <span class="ref-link-text">Фен-щётка для укладки</span>
-                    <span class="ref-link-arrow"><i class="fa-solid fa-arrow-right"></i></span>
-                </a>
+        <section style="padding: 80px 25px 60px;">
+            <h1 style="text-align:center; font-size: 38px; margin-bottom: 50px;">Домашний уход</h1>
+            
+            <div class="care-grid">
+                <div class="card">
+                    <h3>Для поддержания объёма</h3>
+                    <ul>
+                        <li>Сухой шампунь премиум</li>
+                        <li>Прикорневой спрей-активатор</li>
+                        <li>Пудра для объёма</li>
+                        <li>Термозащита лёгкой фиксации</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <h3>Восстановление и питание</h3>
+                    <ul>
+                        <li>Маска для прикорневой зоны</li>
+                        <li>Сыворотка с кератином</li>
+                        <li>Несмываемый кондиционер</li>
+                    </ul>
+                </div>
             </div>
-            <div class="small-note"><i class="fa-solid fa-info-circle"></i> переходя по ссылкам, вы поддерживаете студию — я получаю небольшую комиссию</div>
-        </div>
 
-        <!-- Секция с вопросом-триггером -->
-        <div class="booking" style="text-align: center;">
-            <h2><i class="fa-solid fa-circle-question"></i> Не знаете, что выбрать?</h2>
-            <p style="margin-bottom: 20px;">Напишите мне, и я подберу уход под ваш тип волос</p>
-            <a href="index.html#order" style="display: inline-block; background: #c69c6d; color: white; padding: 14px 30px; border-radius: 50px; text-decoration: none; font-weight: bold;">
-                <i class="fa-solid fa-paper-plane"></i> Получить консультацию
-            </a>
-        </div>
+            <div style="text-align:center; margin: 50px 0;">
+                <a href="index.html#booking" class="btn btn-primary">Получить индивидуальную подборку</a>
+            </div>
+        </section>
 
         <footer>
-            <div><i class="fa-solid fa-feather"></i> Air Root • авторская студия • 2026</div>
-            <div class="footer-sub"><i class="fa-solid fa-heart"></i> бережный подход к тонким волосам</div>
+            <p><strong>Air Root</strong> — студия прикорневого объёма</p>
         </footer>
     </div>
 </body>
