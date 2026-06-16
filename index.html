@@ -2,205 +2,113 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Air Root — Студия прикорневого объёма</title>
-    <meta name="description" content="Авторская методика прикорневого объёма. Естественный результат до 8 недель.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
+    <title>Air Root — Прикорневой объём для тонких волос</title>
+    <meta name="description" content="Авторская техника прикорневого объёма Air Root. Стойкий естественный результат до 6–8 недель. Бережный уход за тонкими волосами.">
     
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    
-    <style>
-        :root {
-            --gold: #d4af88;
-            --deep: #3a2c1c;
-            --cream: #f8f1e3;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(to bottom, #f8f1e3, #f0e6d8);
-            color: var(--deep);
-            line-height: 1.65;
-        }
-        
-        h1, h2, h3 { font-family: 'Playfair Display', serif; }
-        
-        .container { max-width: 480px; margin: 0 auto; background: white; min-height: 100vh; box-shadow: 0 0 50px rgba(58,44,28,0.1); }
-        
-        /* Header */
-        header {
-            background: var(--deep);
-            color: white;
-            padding: 22px 25px 18px;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .logo { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 12px; }
-        .logo i { font-size: 42px; color: var(--gold); }
-        .logo-text { font-size: 23px; line-height: 1; }
-        .logo-text strong { font-size: 34px; display: block; }
-        
-        nav { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; }
-        nav a { color: var(--gold); text-decoration: none; font-weight: 500; }
-        
-        /* Hero */
-        .hero {
-            height: 460px;
-            background: linear-gradient(rgba(58,44,28,0.5), rgba(58,44,28,0.6)), url('https://picsum.photos/id/1015/1200/800') center/cover;
-            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
-        }
-        .hero h1 { font-size: 46px; line-height: 1.05; margin-bottom: 16px; }
-        .hero p { font-size: 19px; margin-bottom: 30px; }
-        .btn { padding: 16px 38px; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-block; }
-        .btn-primary { background: var(--gold); color: var(--deep); }
-        
-        /* Sections */
-        section { padding: 65px 25px; }
-        .section-title {
-            text-align: center;
-            font-size: 34px;
-            margin-bottom: 40px;
-            color: var(--deep);
-        }
-        
-        /* Новые разделы */
-        .care-grid, .training-grid {
-            display: grid;
-            gap: 24px;
-        }
-        
-        .card {
-            background: white;
-            padding: 30px 26px;
-            border-radius: 28px;
-            box-shadow: 0 15px 40px rgba(58,44,28,0.1);
-            transition: all 0.4s;
-        }
-        .card:hover { transform: translateY(-10px); }
-        
-        .icon-big { font-size: 48px; margin-bottom: 20px; }
-        
-        /* Booking */
-        #booking { background: linear-gradient(135deg, var(--deep), #5c4630); color: white; text-align: center; }
-        form { max-width: 400px; margin: 0 auto; }
-        input, textarea { width: 100%; padding: 16px; margin-bottom: 20px; border-radius: 16px; border: none; }
-        button { width: 100%; padding: 18px; background: var(--gold); color: var(--deep); border: none; border-radius: 50px; font-size: 18px; font-weight: 600; }
-        
-        footer { background: var(--deep); color: var(--gold); text-align: center; padding: 45px 25px; }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪶</text></svg>">
 </head>
 <body>
-    <div class="container">
-        
-        <!-- HEADER -->
+    <div id="siteContainer">
         <header>
-            <div class="logo">
-                <i class="fas fa-feather-alt"></i>
-                <div class="logo-text">Air <strong>Root</strong></div>
+            <div class="logo-container">
+                <div class="logo-icon"><i class="fa-solid fa-feather"></i></div>
+                <div class="logo-text">Авторская техника<br><strong>Air Root</strong></div>
             </div>
-<nav>
-    <a href="index.html">Главная</a>
-    <a href="#problem">Проблема</a>
-    <a href="#technique">Методика</a>
-    <a href="products.html">Уход и продукты</a>
-    <a href="training.html">Обучение</a>
-    <a href="#booking">Запись</a>
-</nav>
+
+            <nav>
+                <a href="index.html" class="active"><i class="fa-solid fa-wand-magic-sparkles"></i> Услуга</a>
+                <a href="procedure.html"><i class="fa-solid fa-list-ol"></i> Процедура</a>
+                <a href="products.html"><i class="fa-solid fa-droplet"></i> Уход</a>
+                <a href="training.html"><i class="fa-solid fa-graduation-cap"></i> Обучение</a>
+            </nav>
         </header>
 
-        <!-- HERO -->
-        <section class="hero">
-            <div>
-                <h1>Прикорневой объём,<br>который держится</h1>
-                <p>Естественно • Стойко • До 8 недель</p>
-                <a href="#booking" class="btn btn-primary">Записаться</a>
+        <!-- Hero -->
+        <section class="hero creative-hero">
+            <div class="hero-orb orb1"></div>
+            <div class="hero-orb orb2"></div>
+            <div class="hero-orb orb3"></div>
+            <div class="hero-orb orb4"></div>
+            <div class="hero-orb orb5"></div>
+            <div class="hero-orb orb6"></div>
+            <div class="hero-shape shape1"></div>
+            <div class="hero-shape shape2"></div>
+
+            <div class="hero-content">
+                <span class="hero-tag">✨ объём у корней без вреда</span>
+                <h1 class="hero-title">Air Root</h1>
+                <p class="hero-desc">Природный прикорневой объём до 6–8 недель.<br>Забудьте о ежедневных укладках.</p>
+                <a href="#order" class="btn-hero"><i class="fa-solid fa-calendar-plus"></i> Записаться</a>
             </div>
         </section>
 
-        <!-- PROBLEM -->
-        <section id="problem">
-            <h2 class="section-title">Знакомо?</h2>
-            <div class="care-grid">
-                <div class="card">Объём падает через несколько часов</div>
-                <div class="card">Повреждения от плойки и фена</div>
-                <div class="card">Нет времени на ежедневную укладку</div>
-            </div>
-        </section>
+        <!-- Проблемы -->
+        <div class="problem-block">
+            <span class="badge"><i class="fa-solid fa-circle-exclamation"></i> Знакомо?</span>
+            <ul class="problem-list">
+                <li><i class="fa-solid fa-circle"></i> Объём падает через час</li>
+                <li><i class="fa-solid fa-circle"></i> Постоянные горячие укладки</li>
+                <li><i class="fa-solid fa-circle"></i> Тонкие волосы выглядят плоско</li>
+            </ul>
+        </div>
 
-        <!-- TECHNIQUE -->
-        <section id="technique">
-            <h2 class="section-title">Air Root — это</h2>
-            <div class="care-grid">
-                <div class="card"><strong>Авторская методика</strong><br>с учётом структуры волос</div>
-                <div class="card"><strong>Результат до 8 недель</strong></div>
-                <div class="card"><strong>Без вреда для волос</strong></div>
-            </div>
-        </section>
-
-        <!-- УХОД ЗА ВОЛОСАМИ -->
-        <section id="care">
-            <h2 class="section-title">Домашний уход</h2>
-            <div class="care-grid">
-                <div class="card">
-                    <div class="icon-big">🧴</div>
-                    <h3>Рекомендованные средства</h3>
-                    <p>Подбираем индивидуальный набор для поддержания прикорневого объёма дома. Шампуни, спреи, пудры и сыворотки премиум-класса.</p>
+        <!-- Преимущества -->
+        <div class="technique">
+            <div class="section-header"><i class="fa-solid fa-wand-magic-sparkles"></i><h2>Почему выбирают Air Root</h2></div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <span class="feature-icon">💇‍♀️</span>
+                    <div class="feature-title">Увеличивает объём в 2 раза</div>
                 </div>
-                <div class="card">
-                    <div class="icon-big">📋</div>
-                    <h3>Индивидуальные рекомендации</h3>
-                    <p>После процедуры вы получаете подробную памятку по уходу, которая поможет сохранить результат максимально долго.</p>
+                <div class="feature-card">
+                    <span class="feature-icon">⏳</span>
+                    <div class="feature-title">Результат до 6–8 недель</div>
                 </div>
-            </div>
-        </section>
-
-        <!-- ОБУЧЕНИЕ -->
-        <section id="training" style="background: var(--cream);">
-            <h2 class="section-title">Обучение для мастеров</h2>
-            <div class="training-grid">
-                <div class="card">
-                    <h3>Мастер-класс Air Root</h3>
-                    <p>Однодневный интенсив. Полное погружение в авторскую методику. Теория + практика на моделях.</p>
-                    <strong>Ближайшие даты: скоро</strong>
+                <div class="feature-card">
+                    <span class="feature-icon">🌿</span>
+                    <div class="feature-title">Бережная формула</div>
                 </div>
-                <div class="card">
-                    <h3>Полный курс</h3>
-                    <p>Для тех, кто хочет профессионально освоить технику и предлагать её в своём салоне.</p>
-                    <strong>Сертификат + поддержка</strong>
+                <div class="feature-card">
+                    <span class="feature-icon">✨</span>
+                    <div class="feature-title">Естественный вид</div>
                 </div>
             </div>
-            <div style="text-align:center; margin-top: 30px;">
-                <a href="#booking" class="btn btn-primary">Узнать о ближайших датах</a>
-            </div>
-        </section>
+        </div>
 
-        <!-- BOOKING -->
-        <section id="booking">
-            <h2 class="section-title" style="color:white;">Запишитесь на процедуру или обучение</h2>
-            <form id="bookingForm">
-                <input type="text" placeholder="Ваше имя" required>
-                <input type="tel" placeholder="Телефон" required>
-                <textarea rows="4" placeholder="Что вас интересует? (процедура / уход / обучение)"></textarea>
-                <button type="submit">Отправить заявку</button>
+        <!-- Галерея -->
+        <div class="gallery">
+            <div class="section-header">
+                <i class="fa-solid fa-images"></i>
+                <h2>Примеры работ</h2>
+            </div>
+            <div class="gallery-grid">
+                <div class="gallery-item"><img src="https://picsum.photos/id/1015/600/600" alt="До/После" loading="lazy"><div class="gallery-caption">До / После</div></div>
+                <div class="gallery-item"><img src="https://picsum.photos/id/201/600/600" alt="Объём" loading="lazy"><div class="gallery-caption">Естественный объём</div></div>
+                <div class="gallery-item"><img src="https://picsum.photos/id/237/600/600" alt="Результат" loading="lazy"><div class="gallery-caption">Стойкость</div></div>
+            </div>
+        </div>
+
+        <!-- Форма -->
+        <div class="booking" id="order">
+            <div class="section-header"><i class="fa-solid fa-paper-plane"></i><h2>Записаться</h2></div>
+            <form id="telegramForm" action="https://script.google.com/macros/s/AKfycbyrOPILsOvtzQesbO7XmAyLuJtVeS8jnEHJMzhvH8bzNcdlOUy_-w-eUeD7v7YxPclK/exec" method="GET" target="_blank">
+                <div class="form-group"><label>Имя</label><input type="text" name="name" placeholder="Анна" required></div>
+                <div class="form-group"><label>Телефон</label><input type="tel" name="phone" placeholder="+7 (___) ___-__-__" required></div>
+                <div class="form-group"><label>Удобное время</label><input type="text" name="time" placeholder="Будни / Выходные"></div>
+                <button type="submit"><i class="fa-solid fa-paper-plane"></i> Отправить заявку</button>
+                <div class="success-message" id="successMessage">✅ Заявка отправлена! Я свяжусь с вами</div>
             </form>
-        </section>
+        </div>
 
         <footer>
-            <p><strong>Air Root</strong> — студия прикорневого объёма</p>
-            <p>Москва • © 2026</p>
+            <div><i class="fa-solid fa-feather"></i> Air Root — Авторская техника • 2026</div>
         </footer>
     </div>
 
-    <script>
-        document.getElementById('bookingForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('✅ Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
-            this.reset();
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
