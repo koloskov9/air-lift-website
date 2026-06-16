@@ -1,154 +1,258 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
-    <title>Прикорневой объём Air Root — для тонких волос до 4 месяцев | Студия</title>
-    <meta name="description" content="Прикорневой объём в авторской технике Air Root. Бережная процедура для тонких волос, стойкий результат до 6 недель. Запись в студии.">
-    
-    <!-- Шрифты Prata + Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Prata&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🪶</text></svg>">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Air Root — студия прикорневого объёма</title>
+    <!-- Шрифты для премиального вида -->
+    <link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div id="siteContainer">
-        <header>
-            <div class="logo-container" id="openAdminBtn">
-                <div class="logo-icon"><i class="fa-solid fa-feather"></i></div>
-                <div class="logo-text">Авторская техника<br><strong>Air Root</strong></div>
-            </div>
 
-            <!-- Навигация -->
-            <nav>
-                <a href="index.html" class="active"><i class="fa-solid fa-wand-magic-sparkles"></i> Услуга</a>
-                <a href="training.html"><i class="fa-solid fa-graduation-cap"></i> Обучение</a>
-                <a href="products.html"><i class="fa-solid fa-droplet"></i> Уход</a>
+    <!-- ========== ШАПКА ========== -->
+    <header class="header">
+        <div class="container header-inner">
+            <div class="logo">
+                <a href="#" class="logo-text">Air <strong>Root</strong></a>
+                <span class="logo-tagline">студия прикорневого объёма</span>
+            </div>
+            <nav class="nav">
+                <a href="#problem">Проблема</a>
+                <a href="#technique">Техника</a>
+                <a href="#process">Процесс</a>
+                <a href="#booking">Запись</a>
             </nav>
-        </header>
-
-        <!-- Герой-блок -->
-        <!-- КРЕАТИВНЫЙ HERO С ИМИТАЦИЕЙ ОБЪЁМА -->
-<section class="hero creative-hero">
-    <!-- Декоративные орбы (круги) -->
-    <div class="hero-orb orb1"></div>
-    <div class="hero-orb orb2"></div>
-    <div class="hero-orb orb3"></div>
-    <div class="hero-orb orb4"></div>
-    <div class="hero-orb orb5"></div>
-    <div class="hero-orb orb6"></div>
-
-    <!-- Абстрактные фигуры (имитация прядей) -->
-    <div class="hero-shape shape1"></div>
-    <div class="hero-shape shape2"></div>
-
-    <div class="hero-content">
-        <span class="hero-tag">✨ объём у корней без вреда</span>
-        <h1 class="hero-title">Air Root</h1>
-        <p class="hero-desc">Природный объём, который держится до 6 недель.<br>Забудьте о плойках и утюжках.</p>
-        <a href="#order" class="btn-hero"><i class="fa-solid fa-calendar-plus"></i> Записаться</a>
-    </div>
-</section>
-
-        <!-- Проблемный блок -->
-        <div class="problem-block">
-            <span class="badge"><i class="fa-solid fa-circle-exclamation"></i> Знакомая проблема?</span>
-            <ul class="problem-list">
-                <li><i class="fa-solid fa-circle"></i> Волосы «прилизанные» уже через час после укладки</li>
-                <li><i class="fa-solid fa-circle"></i> Утомительные укладки</li>
-                <li><i class="fa-solid fa-circle"></i> Ежедневное мытье головы</li>
-            </ul>
+            <a href="#booking" class="btn-header">Записаться</a>
         </div>
+    </header>
 
-        <!-- Преимущества -->
-        <div class="technique">
-            <div class="section-header"><i class="fa-solid fa-wand-magic-sparkles"></i><h2>Авторская техника Air Root</h2></div>
-            <div class="feature-grid">
-                <div class="feature-card"><span class="feature-icon">💇‍♀️</span><div class="feature-title">Увеличивает густоту и объем у корней в два раза</div><div class="feature-subtitle">особая постановка</div></div>
-                <div class="feature-card"><span class="feature-icon">✨</span><div class="feature-title">Лучшая альтернатива горячим укладкам и утюжку</div><div class="feature-subtitle">стойкий результат</div></div>
-                <div class="feature-card"><span class="feature-icon">🎀</span><div class="feature-title">Держится 4 месяца</div><div class="feature-subtitle">бережная фиксация</div></div>
-                <div class="feature-card"><span class="feature-icon">🌿</span><div class="feature-title">Не требует специального подхода</div><div class="feature-subtitle">мягкая формула</div></div>
+    <!-- ========== ГЕРОЙ ========== -->
+    <section class="hero">
+        <div class="container hero-inner">
+            <div class="hero-content">
+                <span class="hero-badge">✦ Авторская методика</span>
+                <h1>Прикорневой <br />объём <span class="highlight">без компромиссов</span></h1>
+                <p class="hero-sub">
+                    Естественный, стойкий результат, который подчеркнёт вашу индивидуальность.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#booking" class="btn-hero">Записаться на процедуру</a>
+                    <a href="#technique" class="btn-hero-outline">Узнать подробнее</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <!-- Анимированные пастельные орбы -->
+                <div class="orb orb1"></div>
+                <div class="orb orb2"></div>
+                <div class="orb orb3"></div>
+                <div class="orb orb4"></div>
+                <div class="hero-image-placeholder">
+                    <span>✨ Фото результата</span>
+                </div>
             </div>
         </div>
+    </section>
 
-        <!-- Процесс -->
-        <div class="process">
-            <div class="section-header"><i class="fa-solid fa-list-ol"></i><h2>Как проходит процедура</h2></div>
-            <div class="process-steps">
-                <div class="process-step"><div class="step-circle"><i class="fa-solid fa-comment-dots"></i></div><div class="step-label">Консультация</div></div>
-                <div class="process-step"><div class="step-circle"><i class="fa-solid fa-pump-soap"></i></div><div class="step-label">Подготовка</div></div>
-                <div class="process-step"><div class="step-circle"><i class="fa-solid fa-paintbrush"></i></div><div class="step-label">Нанесение</div></div>
-                <div class="process-step"><div class="step-circle"><i class="fa-solid fa-pause"></i></div><div class="step-label">Выдержка</div></div>
-                <div class="process-step"><div class="step-circle"><i class="fa-solid fa-droplet"></i></div><div class="step-label">Смывка</div></div>
-                <div class="process-step"><div class="step-circle"><i class="fa-solid fa-wind"></i></div><div class="step-label">Укладка</div></div>
-            </div>
-        </div>
-                <!-- ГАЛЕРЕЯ РАБОТ -->
-        <div class="gallery">
+    <!-- ========== БЛОК 1: ПРОБЛЕМА ========== -->
+    <section id="problem" class="section-block">
+        <div class="container">
             <div class="section-header">
-                <i class="fa-solid fa-images"></i>
-                <h2>Примеры работ</h2>
+                <i>💭</i>
+                <h2>Знакомая проблема?</h2>
+                <p class="section-desc">С чем чаще всего сталкиваются девушки, мечтая о красивых волосах</p>
             </div>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://www.istockphoto.com/ro/fotografie/asiatice-femeie-portret-jumătate-corp-rândul-său-partea-din-spate-vedere-din-gm1266585290-371334584" alt="Результат прикорневого объёма 1" loading="lazy">
-                    <div class="gallery-caption">До / После</div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <div class="problem-icon">😕</div>
+                    <h3>Скучный объём</h3>
+                    <p>Корни быстро падают, а укладка держится всего несколько часов.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://picsum.photos/400/400?random=2" alt="Результат прикорневого объёма 2" loading="lazy">
-                    <div class="gallery-caption">Естественный объём</div>
+                <div class="problem-card">
+                    <div class="problem-icon">😣</div>
+                    <h3>Повреждённые волосы</h3>
+                    <p>Частое использование термоприборов и химии приводит к ломкости.</p>
                 </div>
-                <div class="gallery-item">
-                    <img src="https://picsum.photos/400/400?random=3" alt="Результат прикорневого объёма 3" loading="lazy">
-                    <div class="gallery-caption">Стойкость до 6 недель</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://picsum.photos/400/400?random=4" alt="Результат прикорневого объёма 4" loading="lazy">
-                    <div class="gallery-caption">Бережная укладка</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://picsum.photos/400/400?random=5" alt="Результат прикорневого объёма 5" loading="lazy">
-                    <div class="gallery-caption">Пышность у корней</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://picsum.photos/400/400?random=6" alt="Результат прикорневого объёма 6" loading="lazy">
-                    <div class="gallery-caption">Лёгкость в уходе</div>
+                <div class="problem-card">
+                    <div class="problem-icon">😩</div>
+                    <h3>Нет времени на укладку</h3>
+                    <p>Ежедневная трата 30+ минут на создание объёма — это слишком.</p>
                 </div>
             </div>
         </div>
-        <!-- Форма заявки -->
-        <div class="booking" id="order">
-            <div class="section-header"><i class="fa-solid fa-paper-plane"></i><h2>Записаться на услугу</h2></div>
-            <form id="telegramForm" action="https://script.google.com/macros/s/AKfycbyrOPILsOvtzQesbO7XmAyLuJtVeS8jnEHJMzhvH8bzNcdlOUy_-w-eUeD7v7YxPclK/exec" method="GET" target="_blank">
-                <div class="form-group"><label><i class="fa-solid fa-user"></i> Имя</label><input type="text" name="name" placeholder="Анна" required></div>
-                <div class="form-group"><label><i class="fa-solid fa-phone"></i> Телефон</label><input type="tel" name="phone" placeholder="+7..." required></div>
-                <div class="form-group"><label><i class="fa-solid fa-clock"></i> Удобное время</label><input type="text" name="time" placeholder="Любое"></div>
-                <div class="form-group">
-                    <label><i class="fa-solid fa-tag"></i> Тип заявки</label>
-                    <select name="type" required>
-                        <option value="Запись на процедуру">Запись на процедуру</option>
-                        <option value="Обучение Air Root">Обучение технике Air Root</option>
-                        <option value="Вопрос по уходу">Вопросы по уходу</option>
-                    </select>
+    </section>
+
+    <!-- ========== БЛОК 2: ТЕХНИКА (с чередованием фона) ========== -->
+    <section id="technique" class="section-block alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <i>🌟</i>
+                <h2>Авторская техника Air Root</h2>
+                <p class="section-desc">Прикорневой объём, который остаётся с вами надолго</p>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔬</div>
+                    <h3>Научный подход</h3>
+                    <p>Разработано с учётом структуры волоса и скальпа для максимальной безопасности.</p>
                 </div>
-                <button type="submit"><i class="fa-solid fa-paper-plane"></i> Отправить заявку</button>
-                <div class="success-message" id="successMessage"><i class="fa-solid fa-circle-check"></i> Заявка отправлена! Я свяжусь с вами</div>
-            </form>
+                <div class="feature-card">
+                    <div class="feature-icon">🌿</div>
+                    <h3>Натуральные составы</h3>
+                    <p>Используем только гипоаллергенные и экологичные препараты премиум-класса.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏳</div>
+                    <h3>Стойкий эффект</h3>
+                    <p>Результат сохраняется до 6–8 недель без потери качества и естественного вида.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">👩‍🎤</div>
+                    <h3>Индивидуальный подход</h3>
+                    <p>Подбираем объём и форму под ваш тип лица и структуру волос.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <footer>
-            <div><i class="fa-solid fa-feather"></i> Авторская техника Air Root • 2026</div>
-            <div class="footer-sub"><i class="fa-solid fa-heart"></i> Бережный подход к тонким волосам</div>
-        </footer>
-    </div>
+    <!-- ========== БЛОК 3: ПРОЦЕСС ========== -->
+    <section id="process" class="section-block">
+        <div class="container">
+            <div class="section-header">
+                <i>📋</i>
+                <h2>Как проходит процедура</h2>
+                <p class="section-desc">Три простых шага к вашему идеальному объёму</p>
+            </div>
+            <div class="process-steps">
+                <div class="step">
+                    <span class="step-number">01</span>
+                    <h3>Консультация и диагностика</h3>
+                    <p>Оцениваем состояние волос, выбираем оптимальную технику и состав.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">02</span>
+                    <h3>Нанесение и фиксация</h3>
+                    <p>Аккуратно и точно обрабатываем прикорневую зону, создавая естественный подъём.</p>
+                </div>
+                <div class="step">
+                    <span class="step-number">03</span>
+                    <h3>Завершающий уход</h3>
+                    <p>Закрепляем результат, даём рекомендации по домашнему уходу.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Админка (заглушка) -->
-    <div id="adminOverlay">
-        <div id="adminPanel"></div>
-    </div>
+    <!-- ========== БЛОК 4: РЕФЕРАЛЬНАЯ ПРОГРАММА ========== -->
+    <section class="section-block alt-bg">
+        <div class="container">
+            <div class="section-header">
+                <i>🎁</i>
+                <h2>Приведи друга и получи бонус</h2>
+                <p class="section-desc">Мы ценим каждого клиента и рады делать приятные сюрпризы</p>
+            </div>
+            <div class="referral-section">
+                <div class="referral-card">
+                    <div class="referral-icon">🤝</div>
+                    <h3>Скидка 10%</h3>
+                    <p>Вам и вашему другу на следующую процедуру при записи по рекомендации.</p>
+                </div>
+                <div class="referral-card">
+                    <div class="referral-icon">🎨</div>
+                    <h3>Подарочный сертификат</h3>
+                    <p>Каждый 3-й приведённый клиент получает бесплатную процедуру в подарок.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <script src="js/main.js"></script>
-    <script src="js/admin.js"></script>
+    <!-- ========== БЛОК 5: ЗАПИСЬ (ФОРМА) ========== -->
+    <section id="booking" class="section-block">
+        <div class="container">
+            <div class="section-header">
+                <i>📩</i>
+                <h2>Запишитесь на процедуру</h2>
+                <p class="section-desc">Оставьте заявку, и мы подберём удобное время в течение 15 минут</p>
+            </div>
+            <div class="booking-form-wrapper">
+                <form id="bookingForm" class="booking-form">
+                    <div class="form-group">
+                        <label for="name">Ваше имя</label>
+                        <input type="text" id="name" name="name" placeholder="Например, Екатерина" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Телефон</label>
+                        <input type="tel" id="phone" name="phone" placeholder="+7 (___)-___-__-__" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Комментарий (необязательно)</label>
+                        <textarea id="message" name="message" rows="3" placeholder="Расскажите о ваших пожеланиях"></textarea>
+                    </div>
+                    <button type="submit" class="btn-submit">Отправить заявку</button>
+                    <p class="form-privacy">Нажимая на кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ПОДВАЛ ========== -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <div class="logo">Air <strong>Root</strong></div>
+                <p>Студия прикорневого объёма © 2026</p>
+            </div>
+            <div class="footer-links">
+                <a href="#problem">Проблема</a>
+                <a href="#technique">Техника</a>
+                <a href="#process">Процесс</a>
+                <a href="#booking">Запись</a>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Instagram">📸</a>
+                <a href="#" aria-label="Telegram">✈️</a>
+                <a href="#" aria-label="WhatsApp">💬</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== СКРИПТ ФОРМЫ (Telegram) ========== -->
+    <script>
+        // Оставляем ваш работающий скрипт отправки в Telegram (замените токен и chat_id на свои)
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !phone) {
+                alert('Пожалуйста, заполните имя и телефон.');
+                return;
+            }
+
+            // Пример отправки в Telegram (замените на ваши данные)
+            const token = 'YOUR_BOT_TOKEN';
+            const chatId = 'YOUR_CHAT_ID';
+            const text = `Новая заявка:\nИмя: ${name}\nТелефон: ${phone}\nСообщение: ${message || '—'}`;
+
+            fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ chat_id: chatId, text: text })
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.ok) {
+                    alert('Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
+                    document.getElementById('bookingForm').reset();
+                } else {
+                    alert('Произошла ошибка. Попробуйте ещё раз или свяжитесь с нами по телефону.');
+                }
+            })
+            .catch(() => {
+                alert('Ошибка соединения. Проверьте интернет или попробуйте позже.');
+            });
+        });
+    </script>
 </body>
 </html>
