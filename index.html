@@ -1,257 +1,422 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Air Root — студия прикорневого объёма</title>
-    <!-- Шрифты для премиального вида -->
-    <link href="https://fonts.googleapis.com/css2?family=Prata&family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Air Root — Студия прикорневого объёма</title>
+    <meta name="description" content="Авторская методика прикорневого объёма. Естественный и стойкий результат до 8 недель. Премиум-уход за тонкими волосами.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --gold: #d4af88;
+            --deep: #3a2c1c;
+            --cream: #f8f1e3;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--deep);
+            background: linear-gradient(to bottom, #f8f1e3, #ede4d4);
+        }
+        
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+        }
+        
+        .container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 50px rgba(58, 44, 28, 0.12);
+        }
+        
+        /* HEADER */
+        header {
+            background: var(--deep);
+            color: white;
+            padding: 20px 25px 18px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+        
+        .logo i {
+            font-size: 38px;
+            color: var(--gold);
+        }
+        
+        .logo-text {
+            font-size: 22px;
+            line-height: 1;
+        }
+        
+        .logo-text strong { font-size: 32px; display: block; }
+        
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 28px;
+            margin-top: 10px;
+        }
+        
+        nav a {
+            color: var(--gold);
+            text-decoration: none;
+            font-weight: 500;
+            transition: 0.3s;
+        }
+        
+        nav a:hover { color: white; }
+        
+        /* HERO */
+        .hero {
+            position: relative;
+            height: 460px;
+            background: linear-gradient(rgba(58,44,28,0.5), rgba(58,44,28,0.55)), 
+                        url('https://picsum.photos/id/1015/800/600') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+        
+        .hero-content {
+            padding: 0 30px;
+            z-index: 2;
+        }
+        
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(255,255,255,0.95);
+            color: var(--deep);
+            padding: 10px 26px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 15px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+        }
+        
+        .hero h1 {
+            font-size: 44px;
+            line-height: 1.05;
+            margin-bottom: 18px;
+        }
+        
+        .hero p {
+            font-size: 19px;
+            max-width: 360px;
+            margin: 0 auto 30px;
+            opacity: 0.95;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 16px 36px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.4s;
+            font-size: 17px;
+        }
+        
+        .btn-primary {
+            background: var(--gold);
+            color: var(--deep);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 15px 30px rgba(212,175,136,0.4);
+        }
+        
+        /* SECTIONS */
+        section {
+            padding: 55px 25px;
+        }
+        
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 35px;
+            color: var(--deep);
+        }
+        
+        /* Problems */
+        #problem {
+            background: var(--cream);
+        }
+        
+        .problem-grid {
+            display: grid;
+            gap: 22px;
+        }
+        
+        .problem-card {
+            background: white;
+            padding: 28px 24px;
+            border-radius: 24px;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.08);
+            transition: 0.4s;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        /* Benefits */
+        .benefit-grid {
+            display: grid;
+            gap: 20px;
+        }
+        
+        .benefit-card {
+            display: flex;
+            gap: 22px;
+            background: #f8f1e3;
+            padding: 26px;
+            border-radius: 22px;
+        }
+        
+        .benefit-icon {
+            font-size: 42px;
+            flex-shrink: 0;
+        }
+        
+        /* Process */
+        .process-steps {
+            display: grid;
+            gap: 28px;
+        }
+        
+        .step {
+            display: flex;
+            gap: 22px;
+        }
+        
+        .step-number {
+            width: 58px;
+            height: 58px;
+            background: var(--gold);
+            color: var(--deep);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+        
+        /* Booking */
+        #booking {
+            background: linear-gradient(135deg, var(--deep), #5c4630);
+            color: white;
+            text-align: center;
+        }
+        
+        form {
+            max-width: 380px;
+            margin: 0 auto;
+        }
+        
+        .form-group {
+            margin-bottom: 22px;
+            text-align: left;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        input, textarea {
+            width: 100%;
+            padding: 16px 20px;
+            border: none;
+            border-radius: 16px;
+            font-size: 16px;
+        }
+        
+        button {
+            width: 100%;
+            padding: 18px;
+            background: var(--gold);
+            color: var(--deep);
+            border: none;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        
+        footer {
+            background: var(--deep);
+            color: #d4af88;
+            text-align: center;
+            padding: 40px 25px 30px;
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
 
-    <!-- ========== ШАПКА ========== -->
-    <header class="header">
-        <div class="container header-inner">
+        <!-- HEADER -->
+        <header>
             <div class="logo">
-                <a href="#" class="logo-text">Air <strong>Root</strong></a>
-                <span class="logo-tagline">студия прикорневого объёма</span>
+                <i class="fas fa-feather-alt"></i>
+                <div class="logo-text">Air <strong>Root</strong></div>
             </div>
-            <nav class="nav">
+            <nav>
                 <a href="#problem">Проблема</a>
-                <a href="#technique">Техника</a>
+                <a href="#technique">Методика</a>
                 <a href="#process">Процесс</a>
                 <a href="#booking">Запись</a>
             </nav>
-            <a href="#booking" class="btn-header">Записаться</a>
-        </div>
-    </header>
+        </header>
 
-    <!-- ========== ГЕРОЙ ========== -->
-    <section class="hero">
-        <div class="container hero-inner">
+        <!-- HERO -->
+        <section class="hero">
             <div class="hero-content">
-                <span class="hero-badge">✦ Авторская методика</span>
-                <h1>Прикорневой <br />объём <span class="highlight">без компромиссов</span></h1>
-                <p class="hero-sub">
-                    Естественный, стойкий результат, который подчеркнёт вашу индивидуальность.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#booking" class="btn-hero">Записаться на процедуру</a>
-                    <a href="#technique" class="btn-hero-outline">Узнать подробнее</a>
+                <div class="hero-badge">
+                    <i class="fas fa-star"></i> Авторская методика
                 </div>
+                <h1>Прикорневой объём,<br>который держится</h1>
+                <p>Естественно. Стойко. До 8 недель.</p>
+                <a href="#booking" class="btn btn-primary">Записаться на процедуру</a>
             </div>
-            <div class="hero-visual">
-                <!-- Анимированные пастельные орбы -->
-                <div class="orb orb1"></div>
-                <div class="orb orb2"></div>
-                <div class="orb orb3"></div>
-                <div class="orb orb4"></div>
-                <div class="hero-image-placeholder">
-                    <span>✨ Фото результата</span>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========== БЛОК 1: ПРОБЛЕМА ========== -->
-    <section id="problem" class="section-block">
-        <div class="container">
-            <div class="section-header">
-                <i>💭</i>
-                <h2>Знакомая проблема?</h2>
-                <p class="section-desc">С чем чаще всего сталкиваются девушки, мечтая о красивых волосах</p>
-            </div>
+        <!-- PROBLEM -->
+        <section id="problem">
+            <h2 class="section-title">Знакомо?</h2>
             <div class="problem-grid">
                 <div class="problem-card">
-                    <div class="problem-icon">😕</div>
-                    <h3>Скучный объём</h3>
-                    <p>Корни быстро падают, а укладка держится всего несколько часов.</p>
+                    <h3>Объём падает через пару часов</h3>
+                    <p>Укладка не держится, волосы выглядят плоско.</p>
                 </div>
                 <div class="problem-card">
-                    <div class="problem-icon">😣</div>
-                    <h3>Повреждённые волосы</h3>
-                    <p>Частое использование термоприборов и химии приводит к ломкости.</p>
+                    <h3>Повреждения от термоприборов</h3>
+                    <p>Частая сушка и плойка разрушают структуру волос.</p>
                 </div>
                 <div class="problem-card">
-                    <div class="problem-icon">😩</div>
-                    <h3>Нет времени на укладку</h3>
-                    <p>Ежедневная трата 30+ минут на создание объёма — это слишком.</p>
+                    <h3>Нет времени на ежедневную укладку</h3>
+                    <p>Утром хочется просто проснуться красивой.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========== БЛОК 2: ТЕХНИКА (с чередованием фона) ========== -->
-    <section id="technique" class="section-block alt-bg">
-        <div class="container">
-            <div class="section-header">
-                <i>🌟</i>
-                <h2>Авторская техника Air Root</h2>
-                <p class="section-desc">Прикорневой объём, который остаётся с вами надолго</p>
-            </div>
-            <div class="feature-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">🔬</div>
-                    <h3>Научный подход</h3>
-                    <p>Разработано с учётом структуры волоса и скальпа для максимальной безопасности.</p>
+        <!-- TECHNIQUE -->
+        <section id="technique">
+            <h2 class="section-title">Air Root — это</h2>
+            <div class="benefit-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔬</div>
+                    <div>
+                        <h3>Научный подход</h3>
+                        <p>Разработано с учётом структуры волоса и особенностей скальпа.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">🌿</div>
-                    <h3>Натуральные составы</h3>
-                    <p>Используем только гипоаллергенные и экологичные препараты премиум-класса.</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌿</div>
+                    <div>
+                        <h3>Премиум составы</h3>
+                        <p>Гипоаллергенные, натуральные препараты высшего качества.</p>
+                    </div>
                 </div>
-                <div class="feature-card">
-                    <div class="feature-icon">⏳</div>
-                    <h3>Стойкий эффект</h3>
-                    <p>Результат сохраняется до 6–8 недель без потери качества и естественного вида.</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">👩‍🎤</div>
-                    <h3>Индивидуальный подход</h3>
-                    <p>Подбираем объём и форму под ваш тип лица и структуру волос.</p>
+                <div class="benefit-card">
+                    <div class="benefit-icon">⏳</div>
+                    <div>
+                        <h3>Результат до 8 недель</h3>
+                        <p>Стойкий, естественный прикорневой объём без «куколки».</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========== БЛОК 3: ПРОЦЕСС ========== -->
-    <section id="process" class="section-block">
-        <div class="container">
-            <div class="section-header">
-                <i>📋</i>
-                <h2>Как проходит процедура</h2>
-                <p class="section-desc">Три простых шага к вашему идеальному объёму</p>
-            </div>
+        <!-- PROCESS -->
+        <section id="process">
+            <h2 class="section-title">Как проходит процедура</h2>
             <div class="process-steps">
                 <div class="step">
-                    <span class="step-number">01</span>
-                    <h3>Консультация и диагностика</h3>
-                    <p>Оцениваем состояние волос, выбираем оптимальную технику и состав.</p>
+                    <div class="step-number">01</div>
+                    <div>
+                        <h3>Диагностика</h3>
+                        <p>Оцениваем состояние волос и подбираем индивидуальный протокол.</p>
+                    </div>
                 </div>
                 <div class="step">
-                    <span class="step-number">02</span>
-                    <h3>Нанесение и фиксация</h3>
-                    <p>Аккуратно и точно обрабатываем прикорневую зону, создавая естественный подъём.</p>
+                    <div class="step-number">02</div>
+                    <div>
+                        <h3>Работа с прикорневой зоной</h3>
+                        <p>Точная обработка для создания естественного подъёма.</p>
+                    </div>
                 </div>
                 <div class="step">
-                    <span class="step-number">03</span>
-                    <h3>Завершающий уход</h3>
-                    <p>Закрепляем результат, даём рекомендации по домашнему уходу.</p>
+                    <div class="step-number">03</div>
+                    <div>
+                        <h3>Фиксация и уход</h3>
+                        <p>Закрепляем результат и даём рекомендации по домашнему уходу.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- ========== БЛОК 4: РЕФЕРАЛЬНАЯ ПРОГРАММА ========== -->
-    <section class="section-block alt-bg">
-        <div class="container">
-            <div class="section-header">
-                <i>🎁</i>
-                <h2>Приведи друга и получи бонус</h2>
-                <p class="section-desc">Мы ценим каждого клиента и рады делать приятные сюрпризы</p>
-            </div>
-            <div class="referral-section">
-                <div class="referral-card">
-                    <div class="referral-icon">🤝</div>
-                    <h3>Скидка 10%</h3>
-                    <p>Вам и вашему другу на следующую процедуру при записи по рекомендации.</p>
+        <!-- BOOKING -->
+        <section id="booking">
+            <h2 class="section-title" style="color:white;">Запишитесь прямо сейчас</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Имя</label>
+                    <input type="text" id="name" required placeholder="Екатерина">
                 </div>
-                <div class="referral-card">
-                    <div class="referral-icon">🎨</div>
-                    <h3>Подарочный сертификат</h3>
-                    <p>Каждый 3-й приведённый клиент получает бесплатную процедуру в подарок.</p>
+                <div class="form-group">
+                    <label>Телефон</label>
+                    <input type="tel" id="phone" required placeholder="+7 (___) ___-__-__">
                 </div>
-            </div>
-        </div>
-    </section>
+                <div class="form-group">
+                    <label>Комментарий (необязательно)</label>
+                    <textarea id="message" rows="3" placeholder="Когда вам удобно?"></textarea>
+                </div>
+                <button type="submit">Отправить заявку</button>
+            </form>
+        </section>
 
-    <!-- ========== БЛОК 5: ЗАПИСЬ (ФОРМА) ========== -->
-    <section id="booking" class="section-block">
-        <div class="container">
-            <div class="section-header">
-                <i>📩</i>
-                <h2>Запишитесь на процедуру</h2>
-                <p class="section-desc">Оставьте заявку, и мы подберём удобное время в течение 15 минут</p>
-            </div>
-            <div class="booking-form-wrapper">
-                <form id="bookingForm" class="booking-form">
-                    <div class="form-group">
-                        <label for="name">Ваше имя</label>
-                        <input type="text" id="name" name="name" placeholder="Например, Екатерина" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Телефон</label>
-                        <input type="tel" id="phone" name="phone" placeholder="+7 (___)-___-__-__" required />
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Комментарий (необязательно)</label>
-                        <textarea id="message" name="message" rows="3" placeholder="Расскажите о ваших пожеланиях"></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit">Отправить заявку</button>
-                    <p class="form-privacy">Нажимая на кнопку, вы соглашаетесь с политикой обработки персональных данных.</p>
-                </form>
-            </div>
-        </div>
-    </section>
+        <!-- FOOTER -->
+        <footer>
+            <p><strong>Air Root</strong> — студия прикорневого объёма</p>
+            <p>© 2026 • Москва</p>
+        </footer>
+    </div>
 
-    <!-- ========== ПОДВАЛ ========== -->
-    <footer class="footer">
-        <div class="container footer-inner">
-            <div class="footer-brand">
-                <div class="logo">Air <strong>Root</strong></div>
-                <p>Студия прикорневого объёма © 2026</p>
-            </div>
-            <div class="footer-links">
-                <a href="#problem">Проблема</a>
-                <a href="#technique">Техника</a>
-                <a href="#process">Процесс</a>
-                <a href="#booking">Запись</a>
-            </div>
-            <div class="footer-socials">
-                <a href="#" aria-label="Instagram">📸</a>
-                <a href="#" aria-label="Telegram">✈️</a>
-                <a href="#" aria-label="WhatsApp">💬</a>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ========== СКРИПТ ФОРМЫ (Telegram) ========== -->
     <script>
-        // Оставляем ваш работающий скрипт отправки в Telegram (замените токен и chat_id на свои)
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            const name = document.getElementById('name').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const message = document.getElementById('message').value.trim();
-
-            if (!name || !phone) {
-                alert('Пожалуйста, заполните имя и телефон.');
-                return;
-            }
-
-            // Пример отправки в Telegram (замените на ваши данные)
-            const token = 'YOUR_BOT_TOKEN';
-            const chatId = 'YOUR_CHAT_ID';
-            const text = `Новая заявка:\nИмя: ${name}\nТелефон: ${phone}\nСообщение: ${message || '—'}`;
-
-            fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ chat_id: chatId, text: text })
-            })
-            .then(response => response.json())
-            .then(data => {
-                if (data.ok) {
-                    alert('Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
-                    document.getElementById('bookingForm').reset();
-                } else {
-                    alert('Произошла ошибка. Попробуйте ещё раз или свяжитесь с нами по телефону.');
-                }
-            })
-            .catch(() => {
-                alert('Ошибка соединения. Проверьте интернет или попробуйте позже.');
-            });
+            alert('✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+            this.reset();
         });
     </script>
 </body>
