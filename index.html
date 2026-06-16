@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Air Root — Студия прикорневого объёма</title>
-    <meta name="description" content="Авторская методика прикорневого объёма. Естественный и стойкий результат до 8 недель. Премиум-уход за тонкими волосами.">
+    <meta name="description" content="Авторская методика прикорневого объёма. Естественный результат до 8 недель.">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -20,270 +20,82 @@
         
         body {
             font-family: 'Inter', sans-serif;
-            line-height: 1.6;
+            background: linear-gradient(to bottom, #f8f1e3, #f0e6d8);
             color: var(--deep);
-            background: linear-gradient(to bottom, #f8f1e3, #ede4d4);
+            line-height: 1.65;
         }
         
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-        }
+        h1, h2, h3 { font-family: 'Playfair Display', serif; }
         
-        .container {
-            max-width: 480px;
-            margin: 0 auto;
-            background: white;
-            min-height: 100vh;
-            box-shadow: 0 0 50px rgba(58, 44, 28, 0.12);
-        }
+        .container { max-width: 480px; margin: 0 auto; background: white; min-height: 100vh; box-shadow: 0 0 50px rgba(58,44,28,0.1); }
         
-        /* HEADER */
+        /* Header */
         header {
             background: var(--deep);
             color: white;
-            padding: 20px 25px 18px;
+            padding: 22px 25px 18px;
             position: sticky;
             top: 0;
             z-index: 100;
         }
         
-        .logo {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 12px;
-            margin-bottom: 12px;
-        }
+        .logo { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 12px; }
+        .logo i { font-size: 42px; color: var(--gold); }
+        .logo-text { font-size: 23px; line-height: 1; }
+        .logo-text strong { font-size: 34px; display: block; }
         
-        .logo i {
-            font-size: 38px;
-            color: var(--gold);
-        }
+        nav { display: flex; justify-content: center; gap: 22px; flex-wrap: wrap; }
+        nav a { color: var(--gold); text-decoration: none; font-weight: 500; }
         
-        .logo-text {
-            font-size: 22px;
-            line-height: 1;
-        }
-        
-        .logo-text strong { font-size: 32px; display: block; }
-        
-        nav {
-            display: flex;
-            justify-content: center;
-            gap: 28px;
-            margin-top: 10px;
-        }
-        
-        nav a {
-            color: var(--gold);
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.3s;
-        }
-        
-        nav a:hover { color: white; }
-        
-        /* HERO */
+        /* Hero */
         .hero {
-            position: relative;
             height: 460px;
-            background: linear-gradient(rgba(58,44,28,0.5), rgba(58,44,28,0.55)), 
-                        url('https://picsum.photos/id/1015/800/600') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            color: white;
+            background: linear-gradient(rgba(58,44,28,0.5), rgba(58,44,28,0.6)), url('https://picsum.photos/id/1015/1200/800') center/cover;
+            display: flex; align-items: center; justify-content: center; text-align: center; color: white;
         }
+        .hero h1 { font-size: 46px; line-height: 1.05; margin-bottom: 16px; }
+        .hero p { font-size: 19px; margin-bottom: 30px; }
+        .btn { padding: 16px 38px; border-radius: 50px; font-weight: 600; text-decoration: none; display: inline-block; }
+        .btn-primary { background: var(--gold); color: var(--deep); }
         
-        .hero-content {
-            padding: 0 30px;
-            z-index: 2;
-        }
-        
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: rgba(255,255,255,0.95);
-            color: var(--deep);
-            padding: 10px 26px;
-            border-radius: 50px;
-            font-weight: 600;
-            font-size: 15px;
-            margin-bottom: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-        }
-        
-        .hero h1 {
-            font-size: 44px;
-            line-height: 1.05;
-            margin-bottom: 18px;
-        }
-        
-        .hero p {
-            font-size: 19px;
-            max-width: 360px;
-            margin: 0 auto 30px;
-            opacity: 0.95;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 16px 36px;
-            border-radius: 50px;
-            font-weight: 600;
-            text-decoration: none;
-            transition: all 0.4s;
-            font-size: 17px;
-        }
-        
-        .btn-primary {
-            background: var(--gold);
-            color: var(--deep);
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 15px 30px rgba(212,175,136,0.4);
-        }
-        
-        /* SECTIONS */
-        section {
-            padding: 55px 25px;
-        }
-        
+        /* Sections */
+        section { padding: 65px 25px; }
         .section-title {
             text-align: center;
-            font-size: 32px;
-            margin-bottom: 35px;
+            font-size: 34px;
+            margin-bottom: 40px;
             color: var(--deep);
         }
         
-        /* Problems */
-        #problem {
-            background: var(--cream);
-        }
-        
-        .problem-grid {
+        /* Новые разделы */
+        .care-grid, .training-grid {
             display: grid;
-            gap: 22px;
+            gap: 24px;
         }
         
-        .problem-card {
+        .card {
             background: white;
-            padding: 28px 24px;
-            border-radius: 24px;
-            box-shadow: 0 12px 35px rgba(0,0,0,0.08);
-            transition: 0.4s;
+            padding: 30px 26px;
+            border-radius: 28px;
+            box-shadow: 0 15px 40px rgba(58,44,28,0.1);
+            transition: all 0.4s;
         }
+        .card:hover { transform: translateY(-10px); }
         
-        .problem-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        /* Benefits */
-        .benefit-grid {
-            display: grid;
-            gap: 20px;
-        }
-        
-        .benefit-card {
-            display: flex;
-            gap: 22px;
-            background: #f8f1e3;
-            padding: 26px;
-            border-radius: 22px;
-        }
-        
-        .benefit-icon {
-            font-size: 42px;
-            flex-shrink: 0;
-        }
-        
-        /* Process */
-        .process-steps {
-            display: grid;
-            gap: 28px;
-        }
-        
-        .step {
-            display: flex;
-            gap: 22px;
-        }
-        
-        .step-number {
-            width: 58px;
-            height: 58px;
-            background: var(--gold);
-            color: var(--deep);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 24px;
-            font-weight: bold;
-            flex-shrink: 0;
-        }
+        .icon-big { font-size: 48px; margin-bottom: 20px; }
         
         /* Booking */
-        #booking {
-            background: linear-gradient(135deg, var(--deep), #5c4630);
-            color: white;
-            text-align: center;
-        }
+        #booking { background: linear-gradient(135deg, var(--deep), #5c4630); color: white; text-align: center; }
+        form { max-width: 400px; margin: 0 auto; }
+        input, textarea { width: 100%; padding: 16px; margin-bottom: 20px; border-radius: 16px; border: none; }
+        button { width: 100%; padding: 18px; background: var(--gold); color: var(--deep); border: none; border-radius: 50px; font-size: 18px; font-weight: 600; }
         
-        form {
-            max-width: 380px;
-            margin: 0 auto;
-        }
-        
-        .form-group {
-            margin-bottom: 22px;
-            text-align: left;
-        }
-        
-        label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: 500;
-        }
-        
-        input, textarea {
-            width: 100%;
-            padding: 16px 20px;
-            border: none;
-            border-radius: 16px;
-            font-size: 16px;
-        }
-        
-        button {
-            width: 100%;
-            padding: 18px;
-            background: var(--gold);
-            color: var(--deep);
-            border: none;
-            border-radius: 50px;
-            font-size: 18px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        
-        footer {
-            background: var(--deep);
-            color: #d4af88;
-            text-align: center;
-            padding: 40px 25px 30px;
-            font-size: 14px;
-        }
+        footer { background: var(--deep); color: var(--gold); text-align: center; padding: 45px 25px; }
     </style>
 </head>
 <body>
     <div class="container">
-
+        
         <!-- HEADER -->
         <header>
             <div class="logo">
@@ -293,129 +105,99 @@
             <nav>
                 <a href="#problem">Проблема</a>
                 <a href="#technique">Методика</a>
-                <a href="#process">Процесс</a>
+                <a href="#care">Уход</a>
+                <a href="#training">Обучение</a>
                 <a href="#booking">Запись</a>
             </nav>
         </header>
 
         <!-- HERO -->
         <section class="hero">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-star"></i> Авторская методика
-                </div>
+            <div>
                 <h1>Прикорневой объём,<br>который держится</h1>
-                <p>Естественно. Стойко. До 8 недель.</p>
-                <a href="#booking" class="btn btn-primary">Записаться на процедуру</a>
+                <p>Естественно • Стойко • До 8 недель</p>
+                <a href="#booking" class="btn btn-primary">Записаться</a>
             </div>
         </section>
 
         <!-- PROBLEM -->
         <section id="problem">
             <h2 class="section-title">Знакомо?</h2>
-            <div class="problem-grid">
-                <div class="problem-card">
-                    <h3>Объём падает через пару часов</h3>
-                    <p>Укладка не держится, волосы выглядят плоско.</p>
-                </div>
-                <div class="problem-card">
-                    <h3>Повреждения от термоприборов</h3>
-                    <p>Частая сушка и плойка разрушают структуру волос.</p>
-                </div>
-                <div class="problem-card">
-                    <h3>Нет времени на ежедневную укладку</h3>
-                    <p>Утром хочется просто проснуться красивой.</p>
-                </div>
+            <div class="care-grid">
+                <div class="card">Объём падает через несколько часов</div>
+                <div class="card">Повреждения от плойки и фена</div>
+                <div class="card">Нет времени на ежедневную укладку</div>
             </div>
         </section>
 
         <!-- TECHNIQUE -->
         <section id="technique">
             <h2 class="section-title">Air Root — это</h2>
-            <div class="benefit-grid">
-                <div class="benefit-card">
-                    <div class="benefit-icon">🔬</div>
-                    <div>
-                        <h3>Научный подход</h3>
-                        <p>Разработано с учётом структуры волоса и особенностей скальпа.</p>
-                    </div>
+            <div class="care-grid">
+                <div class="card"><strong>Авторская методика</strong><br>с учётом структуры волос</div>
+                <div class="card"><strong>Результат до 8 недель</strong></div>
+                <div class="card"><strong>Без вреда для волос</strong></div>
+            </div>
+        </section>
+
+        <!-- УХОД ЗА ВОЛОСАМИ -->
+        <section id="care">
+            <h2 class="section-title">Домашний уход</h2>
+            <div class="care-grid">
+                <div class="card">
+                    <div class="icon-big">🧴</div>
+                    <h3>Рекомендованные средства</h3>
+                    <p>Подбираем индивидуальный набор для поддержания прикорневого объёма дома. Шампуни, спреи, пудры и сыворотки премиум-класса.</p>
                 </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">🌿</div>
-                    <div>
-                        <h3>Премиум составы</h3>
-                        <p>Гипоаллергенные, натуральные препараты высшего качества.</p>
-                    </div>
-                </div>
-                <div class="benefit-card">
-                    <div class="benefit-icon">⏳</div>
-                    <div>
-                        <h3>Результат до 8 недель</h3>
-                        <p>Стойкий, естественный прикорневой объём без «куколки».</p>
-                    </div>
+                <div class="card">
+                    <div class="icon-big">📋</div>
+                    <h3>Индивидуальные рекомендации</h3>
+                    <p>После процедуры вы получаете подробную памятку по уходу, которая поможет сохранить результат максимально долго.</p>
                 </div>
             </div>
         </section>
 
-        <!-- PROCESS -->
-        <section id="process">
-            <h2 class="section-title">Как проходит процедура</h2>
-            <div class="process-steps">
-                <div class="step">
-                    <div class="step-number">01</div>
-                    <div>
-                        <h3>Диагностика</h3>
-                        <p>Оцениваем состояние волос и подбираем индивидуальный протокол.</p>
-                    </div>
+        <!-- ОБУЧЕНИЕ -->
+        <section id="training" style="background: var(--cream);">
+            <h2 class="section-title">Обучение для мастеров</h2>
+            <div class="training-grid">
+                <div class="card">
+                    <h3>Мастер-класс Air Root</h3>
+                    <p>Однодневный интенсив. Полное погружение в авторскую методику. Теория + практика на моделях.</p>
+                    <strong>Ближайшие даты: скоро</strong>
                 </div>
-                <div class="step">
-                    <div class="step-number">02</div>
-                    <div>
-                        <h3>Работа с прикорневой зоной</h3>
-                        <p>Точная обработка для создания естественного подъёма.</p>
-                    </div>
+                <div class="card">
+                    <h3>Полный курс</h3>
+                    <p>Для тех, кто хочет профессионально освоить технику и предлагать её в своём салоне.</p>
+                    <strong>Сертификат + поддержка</strong>
                 </div>
-                <div class="step">
-                    <div class="step-number">03</div>
-                    <div>
-                        <h3>Фиксация и уход</h3>
-                        <p>Закрепляем результат и даём рекомендации по домашнему уходу.</p>
-                    </div>
-                </div>
+            </div>
+            <div style="text-align:center; margin-top: 30px;">
+                <a href="#booking" class="btn btn-primary">Узнать о ближайших датах</a>
             </div>
         </section>
 
         <!-- BOOKING -->
         <section id="booking">
-            <h2 class="section-title" style="color:white;">Запишитесь прямо сейчас</h2>
+            <h2 class="section-title" style="color:white;">Запишитесь на процедуру или обучение</h2>
             <form id="bookingForm">
-                <div class="form-group">
-                    <label>Имя</label>
-                    <input type="text" id="name" required placeholder="Екатерина">
-                </div>
-                <div class="form-group">
-                    <label>Телефон</label>
-                    <input type="tel" id="phone" required placeholder="+7 (___) ___-__-__">
-                </div>
-                <div class="form-group">
-                    <label>Комментарий (необязательно)</label>
-                    <textarea id="message" rows="3" placeholder="Когда вам удобно?"></textarea>
-                </div>
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="Телефон" required>
+                <textarea rows="4" placeholder="Что вас интересует? (процедура / уход / обучение)"></textarea>
                 <button type="submit">Отправить заявку</button>
             </form>
         </section>
 
-        <!-- FOOTER -->
         <footer>
             <p><strong>Air Root</strong> — студия прикорневого объёма</p>
-            <p>© 2026 • Москва</p>
+            <p>Москва • © 2026</p>
         </footer>
     </div>
 
     <script>
         document.getElementById('bookingForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.');
+            alert('✅ Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
             this.reset();
         });
     </script>
