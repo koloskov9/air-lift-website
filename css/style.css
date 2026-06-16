@@ -100,17 +100,218 @@ nav a.active {
 }
 
 /* === ГЕРОЙ === */
-.hero-img {
-    width: 100%;
-    height: 200px;
-    background: linear-gradient(120deg, #fae3d9, #fce4d6);
-    border-radius: 25px;
-    margin: 25px 0;
+/* ===== КРЕАТИВНЫЙ HERO С ОРБАМИ ===== */
+.creative-hero {
+    position: relative;
+    min-height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    position: relative;
+    padding: 2rem 1.5rem;
+    background: linear-gradient(135deg, #fbf5f0 0%, #f0e3da 50%, #e8d5cc 100%);
     overflow: hidden;
+    border-radius: 0 0 60px 60px;
+    margin-bottom: 2rem;
+}
+
+/* Декоративные орбы (круги) */
+.hero-orb {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.4) 0%, rgba(210,180,170,0.2) 100%);
+    filter: blur(40px);
+    pointer-events: none;
+    animation: orbFloat 12s ease-in-out infinite alternate;
+}
+
+.orb1 {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    left: -100px;
+    background: radial-gradient(circle, rgba(255,220,210,0.3) 0%, rgba(200,170,160,0.1) 100%);
+    animation-duration: 14s;
+}
+.orb2 {
+    width: 500px;
+    height: 500px;
+    bottom: -150px;
+    right: -150px;
+    background: radial-gradient(circle, rgba(240,210,200,0.25) 0%, rgba(180,150,140,0.1) 100%);
+    animation-duration: 16s;
+    animation-delay: -4s;
+}
+.orb3 {
+    width: 300px;
+    height: 300px;
+    top: 40%;
+    left: 60%;
+    background: radial-gradient(circle, rgba(255,240,235,0.3) 0%, rgba(220,190,180,0.1) 100%);
+    animation-duration: 18s;
+    animation-delay: -8s;
+}
+.orb4 {
+    width: 200px;
+    height: 200px;
+    top: 10%;
+    right: 10%;
+    background: radial-gradient(circle, rgba(255,230,220,0.3) 0%, rgba(200,170,160,0.1) 100%);
+    animation-duration: 10s;
+    animation-delay: -2s;
+}
+.orb5 {
+    width: 350px;
+    height: 350px;
+    bottom: 20%;
+    left: 10%;
+    background: radial-gradient(circle, rgba(250,235,225,0.2) 0%, rgba(190,160,150,0.1) 100%);
+    animation-duration: 15s;
+    animation-delay: -6s;
+}
+.orb6 {
+    width: 250px;
+    height: 250px;
+    top: 60%;
+    right: 25%;
+    background: radial-gradient(circle, rgba(255,245,240,0.25) 0%, rgba(210,180,170,0.1) 100%);
+    animation-duration: 13s;
+    animation-delay: -10s;
+}
+
+/* Дополнительные абстрактные фигуры (имитация прядей) */
+.hero-shape {
+    position: absolute;
+    border-radius: 50% 50% 50% 0;
+    background: rgba(255,255,255,0.08);
+    pointer-events: none;
+    transform: rotate(45deg);
+    animation: shapeFloat 20s ease-in-out infinite alternate;
+}
+.shape1 {
+    width: 600px;
+    height: 200px;
+    top: 10%;
+    left: -100px;
+    border-radius: 60% 40% 30% 70% / 50% 60% 40% 50%;
+    background: rgba(255,220,210,0.1);
+    animation-duration: 22s;
+}
+.shape2 {
+    width: 500px;
+    height: 150px;
+    bottom: 10%;
+    right: -80px;
+    border-radius: 40% 60% 70% 30% / 50% 40% 60% 50%;
+    background: rgba(240,210,200,0.1);
+    animation-duration: 18s;
+    animation-delay: -6s;
+}
+
+@keyframes orbFloat {
+    0% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(30px, -20px) scale(1.1); }
+    66% { transform: translate(-20px, 30px) scale(0.9); }
+    100% { transform: translate(10px, -10px) scale(1.05); }
+}
+
+@keyframes shapeFloat {
+    0% { transform: translate(0, 0) rotate(45deg) scale(1); }
+    50% { transform: translate(-30px, 20px) rotate(60deg) scale(1.2); }
+    100% { transform: translate(20px, -30px) rotate(30deg) scale(0.9); }
+}
+
+/* Контент */
+.creative-hero .hero-content {
+    position: relative;
+    z-index: 5;
+    text-align: center;
+    max-width: 750px;
+}
+
+.hero-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.5);
+    backdrop-filter: blur(8px);
+    padding: 0.4rem 1.6rem;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #4a3f3a;
+    letter-spacing: 0.5px;
+    margin-bottom: 1.5rem;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+}
+
+.creative-hero .hero-title {
+    font-family: 'Prata', serif;
+    font-size: clamp(4rem, 18vw, 7rem);
+    font-weight: 400;
+    color: #2b2420;
+    line-height: 1.1;
+    margin: 0 0 0.5rem;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.06);
+}
+
+.creative-hero .hero-desc {
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    color: #5a4f49;
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 2.2rem;
+}
+
+.btn-hero {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 1rem 2.8rem;
+    background: #2b2420;
+    color: #fff;
+    border-radius: 60px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 28px rgba(43, 36, 32, 0.25);
+}
+
+.btn-hero:hover {
+    transform: translateY(-4px) scale(1.02);
+    box-shadow: 0 14px 36px rgba(43, 36, 32, 0.35);
+    background: #1f1815;
+}
+
+/* Адаптив */
+@media (max-width: 768px) {
+    .creative-hero {
+        min-height: 70vh;
+        border-radius: 0 0 30px 30px;
+    }
+    .hero-orb {
+        filter: blur(30px);
+    }
+    .orb1, .orb2, .orb3, .orb4, .orb5, .orb6 {
+        width: 200px;
+        height: 200px;
+    }
+    .btn-hero {
+        padding: 0.8rem 2rem;
+        font-size: 1rem;
+    }
+}
+@media (max-width: 480px) {
+    .creative-hero {
+        min-height: 60vh;
+        padding: 1rem;
+    }
+    .hero-tag {
+        font-size: 0.75rem;
+        padding: 0.3rem 1rem;
+    }
+    .creative-hero .hero-title {
+        font-size: clamp(2.8rem, 15vw, 4rem);
+    }
 }
 
 .hero-img::before {
@@ -434,5 +635,88 @@ footer {
     }
     .process-steps {
         grid-template-columns: repeat(2, 1fr);
+    }
+}
+/* ===== Галерея ===== */
+.gallery {
+    padding: 3rem 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    aspect-ratio: 1 / 1; /* квадрат */
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05);
+}
+
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.6));
+    color: #fff;
+    padding: 1rem 0.8rem 0.8rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3px;
+    backdrop-filter: blur(2px);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
+}
+
+/* Адаптив для маленьких экранов */
+@media (max-width: 640px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.8rem;
+    }
+    .gallery-item {
+        aspect-ratio: 1 / 1;
+    }
+    .gallery-caption {
+        font-size: 0.7rem;
+        padding: 0.5rem 0.4rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 0.5rem;
     }
 }
