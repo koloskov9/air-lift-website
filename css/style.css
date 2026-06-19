@@ -2,7 +2,6 @@
    LUXURY BEAUTY CORE CONFIGURATION
    ========================================================================== */
 :root {
-    /* Цветовая палитра */
     --bg-main: #F8F5F2;
     --bg-warm-white: #FAF9F7;
     --accent-gold: #C9A961;
@@ -13,20 +12,17 @@
     --text-gray: #6B6B6B;
     --white: #FFFFFF;
    
-    /* Типографика */
     --font-title: 'Playfair Display', serif;
     --font-body: 'Lato', sans-serif;
     --font-accent: 'Montserrat', sans-serif;
     --font-number: 'Oswald', sans-serif;
 
-    /* Визуальные эффекты */
     --shadow-premium: 0 10px 40px rgba(62, 39, 27, 0.07);
     --shadow-hover: 0 15px 50px rgba(201, 169, 97, 0.18);
     --border-gold-light: 1px solid rgba(201, 169, 97, 0.25);
-    --transition-smooth: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* Глобальный сброс */
 * {
     margin: 0;
     padding: 0;
@@ -53,14 +49,12 @@ body {
     flex-direction: column;
     position: relative;
     background-color: var(--bg-warm-white);
+    overflow-x: hidden;
 }
 
-/* ==========================================================================
-   ШРИФТЫ И АКЦЕНТЫ
-   ========================================================================== */
 h1, h2, h3, h4 {
-    font-family: var(--font-title);
     color: var(--text-chocolate);
+    font-family: var(--font-title);
     font-weight: 700;
 }
 
@@ -68,26 +62,24 @@ h1, h2, h3, h4 {
     font-family: var(--font-number);
     font-weight: 700;
     color: var(--accent-gold);
-    font-size: 1.15EM;
-    letter-spacing: 0.5px;
+    font-size: 1.1em;
 }
 
 .icon-gold {
     color: var(--accent-gold);
 }
 
-/* Decorative Line */
 .decorative-line {
     height: 1px;
     background: var(--accent-gold);
     opacity: 0.3;
-    margin: 60px auto;
-    width: 75%;
-    max-width: 1000px;
+    margin: 40px auto;
+    width: 85%;
+    max-width: 1200px;
 }
 
 /* ==========================================================================
-   LAVISH HEADER & NAVIGATION
+   HEADER & NAVIGATION (ADAPTIVE)
    ========================================================================== */
 .luxury-header {
     background: rgba(250, 249, 247, 0.95);
@@ -102,10 +94,12 @@ h1, h2, h3, h4 {
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
 .logo-container {
@@ -115,8 +109,9 @@ h1, h2, h3, h4 {
 }
 
 .logo-icon i {
-    font-size: 32px;
+    font-size: 26px;
     color: var(--accent-gold);
+    opacity: 0.9;
 }
 
 .logo-text {
@@ -129,7 +124,7 @@ h1, h2, h3, h4 {
 
 .logo-text strong {
     font-family: var(--font-title);
-    font-size: 22px;
+    font-size: 20px;
     color: var(--text-chocolate);
     text-transform: none;
     letter-spacing: 0;
@@ -138,7 +133,7 @@ h1, h2, h3, h4 {
 
 .luxury-nav {
     display: flex;
-    gap: 8px;
+    gap: 5px;
 }
 
 .luxury-nav a {
@@ -147,7 +142,7 @@ h1, h2, h3, h4 {
     font-family: var(--font-accent);
     font-size: 14px;
     font-weight: 500;
-    padding: 8px 18px;
+    padding: 8px 16px;
     border-radius: 30px;
     display: flex;
     align-items: center;
@@ -156,33 +151,32 @@ h1, h2, h3, h4 {
 }
 
 .luxury-nav a i {
-    font-size: 13px;
+    font-size: 12px;
     color: var(--accent-gold);
+    opacity: 0.8;
 }
 
 .luxury-nav a:hover,
 .luxury-nav a.active {
     background: var(--pastel-pink);
-    color: var(--text-chocolate);
     box-shadow: 0 4px 15px rgba(62, 39, 35, 0.04);
 }
 
 /* ==========================================================================
-   HERO SECTION (СОВРЕМЕННЫЙ ДВУХКОЛОНОЧНЫЙ ЛЮКС БАННЕР)
+   HERO SECTION (FLEXIBLE ADAPTIVE WITH BACKGROUND PLACEHOLDER)
    ========================================================================== */
 .hero-section {
     background: linear-gradient(135deg, var(--bg-main) 0%, var(--pastel-pink) 100%);
-    padding: 100px 24px;
-    overflow: hidden;
+    padding: 60px 20px;
 }
 
 .hero-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
-    gap: 60px;
+    gap: 40px;
 }
 
 .hero-content {
@@ -192,37 +186,41 @@ h1, h2, h3, h4 {
 .hero-tag {
     font-family: var(--font-accent);
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 11px;
     letter-spacing: 2px;
     color: var(--accent-bronze);
     background: var(--white);
     padding: 6px 16px;
     border-radius: 50px;
     display: inline-block;
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     border: 1px solid rgba(201, 169, 97, 0.2);
 }
 
 .hero-title {
-    font-size: 72px;
+    font-size: clamp(40px, 6vw, 72px);
     line-height: 1.1;
     margin-bottom: 20px;
 }
 
 .hero-desc {
-    font-size: 22px;
+    font-size: clamp(18px, 2.5vw, 22px);
     color: var(--text-chocolate);
-    margin-bottom: 40px;
+    margin-bottom: 35px;
     font-weight: 300;
-    max-width: 600px;
 }
 
 .hero-image-slot {
     position: relative;
-    border-radius: 30px;
+    border-radius: 24px;
     overflow: hidden;
     box-shadow: var(--shadow-premium);
     border: var(--border-gold-light);
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    /* Элегантный фон-заглушка, если картинка ломается */
+    background: #E8DCD8 url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23C9A961" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8z"/></svg>') center no-repeat;
+    background-size: 40px;
 }
 
 .hero-image-slot img {
@@ -233,13 +231,13 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
-   КОМПОНЕНТЫ КНОПОК БЬЮТИ И КАРТОЧЕК
+   BUTTONS & GRIDS (FLUID RESPONSIVE)
    ========================================================================== */
 .btn-premium {
     background: linear-gradient(135deg, var(--accent-gold), var(--accent-bronze));
     color: var(--white);
-    padding: 18px 45px;
-    border-radius: 20px;
+    padding: 16px 36px;
+    border-radius: 16px;
     font-weight: 600;
     font-family: var(--font-accent);
     text-decoration: none;
@@ -249,44 +247,38 @@ h1, h2, h3, h4 {
     cursor: pointer;
     letter-spacing: 0.5px;
     transition: var(--transition-smooth);
-    box-shadow: 0 8px 25px rgba(201, 169, 97, 0.3);
+    box-shadow: 0 8px 25px rgba(201, 169, 97, 0.25);
+    width: auto;
 }
 
 .btn-premium:hover {
-    transform: scale(1.03);
-    box-shadow: 0 12px 35px rgba(201, 169, 97, 0.45);
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(201, 169, 97, 0.4);
 }
 
-/* Структурная секция */
 .content-section {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 60px 24px;
+    padding: 50px 20px;
 }
 
 .section-center-header {
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 40px;
 }
 
 .section-center-header h2 {
-    font-size: 40px;
-    margin-top: 15px;
-}
-
-.section-subtitle {
-    color: var(--text-gray);
-    font-size: 18px;
-    margin-top: 10px;
+    font-size: clamp(28px, 4vw, 40px);
+    margin-top: 12px;
 }
 
 .badge {
     background: var(--white);
     border: var(--border-gold-light);
     color: var(--text-chocolate);
-    padding: 6px 18px;
+    padding: 6px 16px;
     border-radius: 50px;
-    font-size: 14px;
+    font-size: 13px;
     font-family: var(--font-accent);
     font-weight: 500;
     display: inline-flex;
@@ -294,39 +286,41 @@ h1, h2, h3, h4 {
     gap: 8px;
 }
 
-/* Универсальные макетные сетки */
+/* Адаптивные сетки без жесткого пиксельного сжатия */
 .cards-layout-three {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
 }
 
 .cards-layout-four {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 24px;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
-/* Orange Card (По ТЗ — Белый премиальный фон с золотой рамкой) */
+/* CARDS */
 .orange-card {
     background: var(--white);
     border: var(--border-gold-light);
     border-radius: 16px;
-    padding: 35px;
+    padding: 30px;
     box-shadow: var(--shadow-premium);
     transition: var(--transition-smooth);
     position: relative;
+    display: flex;
+    flex-direction: column;
 }
 
 .orange-card:hover {
-    transform: translateY(-5px) scale(1.03);
+    transform: translateY(-4px) scale(1.01);
     box-shadow: var(--shadow-hover);
     border-color: var(--accent-gold);
 }
 
 .card-icon-wrapper {
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     background: var(--bg-main);
     border-radius: 50%;
     display: flex;
@@ -336,35 +330,37 @@ h1, h2, h3, h4 {
 }
 
 .card-icon-wrapper i {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--accent-gold);
+    opacity: 0.85; /* Легкая прозрачность придает "дорогой" контурный вид */
 }
 
 .orange-card p {
-    font-size: 18px;
+    font-size: 17px;
     color: var(--text-gray);
+    line-height: 1.6;
 }
 
 /* ==========================================================================
-   БЛОК: АВТОРСКИЕ ПРЕИМУЩЕСТВА (TECHNIQUE)
+   BENEFITS, TRAINING, PRODUCTS
    ========================================================================== */
 .technique-section {
     background: linear-gradient(180deg, var(--white) 0%, var(--pastel-pink) 100%);
-    border-radius: 30px;
-    padding: 60px 40px;
+    border-radius: 24px;
+    padding: 50px 30px;
 }
 
 .luxury-benefit-card {
     background: var(--white);
     border: var(--border-gold-light);
-    border-radius: 20px;
-    padding: 30px;
+    border-radius: 16px;
+    padding: 24px;
     box-shadow: var(--shadow-premium);
     transition: var(--transition-smooth);
 }
 
 .luxury-benefit-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
 }
 
@@ -372,15 +368,16 @@ h1, h2, h3, h4 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 20px;
+    margin-bottom: 16px;
 }
 
 .benefit-header i {
-    font-size: 28px;
+    font-size: 24px;
+    opacity: 0.85;
 }
 
 .benefit-number {
-    font-size: 14px;
+    font-size: 13px;
     text-transform: uppercase;
     font-family: var(--font-accent);
     color: var(--accent-bronze);
@@ -388,64 +385,58 @@ h1, h2, h3, h4 {
 }
 
 .luxury-benefit-card h3 {
-    font-size: 22px;
-    margin-bottom: 12px;
-    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .luxury-benefit-card p {
-    font-size: 16px;
+    font-size: 15px;
     color: var(--text-gray);
     line-height: 1.6;
 }
 
-/* ==========================================================================
-   СТРАНИЦА ОБУЧЕНИЯ И РЕФЕРАЛЬНЫХ ТОВАРОВ
-   ========================================================================== */
-.luxury-course-card .course-tag {
-    position: absolute;
-    top: 20px;
-    right: 24px;
+.luxury-course-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.course-tag {
+    align-self: flex-start;
     font-family: var(--font-accent);
     font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
     background: var(--soft-lavender);
     padding: 4px 12px;
     border-radius: 20px;
     color: var(--text-chocolate);
-}
-
-.luxury-course-card .course-tag.golden-tag {
-    background: linear-gradient(135deg, #F3E1C3, #EAD4A4);
-}
-
-.luxury-course-card h3 {
-    font-size: 26px;
     margin-bottom: 10px;
-    margin-top: 10px;
+}
+
+.course-tag.golden-tag {
+    background: linear-gradient(135deg, #F3E1C3, #EAD4A4);
 }
 
 .course-time {
     font-size: 15px;
-    color: var(--text-gray);
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .course-time i {
     color: var(--accent-gold);
-    margin-right: 4px;
+    margin-right: 6px;
 }
 
 .course-info-text {
     font-size: 15px !important;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .course-price-tag {
     font-family: var(--font-title);
-    font-size: 28px;
+    font-size: 26px;
     color: var(--text-chocolate);
+    margin-top: auto;
     margin-bottom: 20px;
     font-weight: 700;
 }
@@ -454,29 +445,23 @@ h1, h2, h3, h4 {
     width: 100%;
 }
 
-/* Маркетплейсы домашнего ухода */
 .category-title-luxury {
-    font-size: 28px;
-    margin-bottom: 25px;
+    font-size: 24px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 12px;
 }
 
-.category-title-luxury i {
-    font-size: 22px;
-}
-
 .product-luxury-item h4 {
     font-family: var(--font-accent);
     font-size: 18px;
-    font-weight: 600;
     margin-bottom: 10px;
 }
 
 .product-luxury-item p {
     font-size: 15px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .btn-ref {
@@ -485,22 +470,23 @@ h1, h2, h3, h4 {
     justify-content: center;
     gap: 8px;
     width: 100%;
-    padding: 14px;
+    padding: 12px;
     border-radius: 12px;
     color: var(--white);
     text-decoration: none;
     font-weight: 500;
     font-family: var(--font-accent);
     font-size: 14px;
+    margin-top: auto;
     transition: var(--transition-smooth);
 }
 
-.btn-ref.wb-ref { background: #481173; box-shadow: 0 4px 15px rgba(72, 17, 115, 0.15); }
-.btn-ref.ozon-ref { background: #005bff; box-shadow: 0 4px 15px rgba(0, 91, 255, 0.15); }
+.btn-ref.wb-ref { background: #481173; }
+.btn-ref.ozon-ref { background: #005bff; }
 .btn-ref:hover { transform: translateY(-2px); opacity: 0.95; }
 
 /* ==========================================================================
-   HIGH-END BOOKING FORM
+   BOOKING FORM & FOOTER
    ========================================================================== */
 .booking-section {
     display: flex;
@@ -511,42 +497,41 @@ h1, h2, h3, h4 {
     background: var(--white);
     border: var(--border-gold-light);
     border-radius: 20px;
-    padding: 50px 40px;
+    padding: 40px 30px;
     box-shadow: var(--shadow-premium);
-    max-width: 600px;
+    max-width: 550px;
     width: 100%;
 }
 
 .form-header {
     text-align: center;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .form-header i {
-    font-size: 32px;
-    margin-bottom: 12px;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .form-header h2 {
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 28px;
+    margin-bottom: 8px;
 }
 
 .form-header p {
     font-size: 15px;
-    color: var(--text-gray);
 }
 
 .styled-luxury-form .form-group {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .styled-luxury-form label {
     font-family: var(--font-accent);
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--text-chocolate);
     text-transform: uppercase;
@@ -556,10 +541,10 @@ h1, h2, h3, h4 {
 .styled-luxury-form input {
     background: var(--bg-warm-white);
     border: 1px solid #E0E0E0;
-    border-radius: 12px;
-    padding: 16px 20px;
+    border-radius: 10px;
+    padding: 14px 16px;
     font-family: var(--font-body);
-    font-size: 18px;
+    font-size: 16px;
     color: var(--text-chocolate);
     transition: var(--transition-smooth);
     width: 100%;
@@ -568,7 +553,7 @@ h1, h2, h3, h4 {
 .styled-luxury-form input:focus {
     border: 1px solid var(--accent-gold);
     outline: none;
-    box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.2);
+    box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.15);
     background: var(--white);
 }
 
@@ -577,67 +562,79 @@ h1, h2, h3, h4 {
     margin-top: 10px;
 }
 
-/* ==========================================================================
-   LUXURY FOOTER
-   ========================================================================== */
 .luxury-footer {
     background: var(--white);
     border-top: 1px solid rgba(201, 169, 97, 0.12);
-    padding: 30px 24px;
+    padding: 25px 20px;
     text-align: center;
     margin-top: auto;
 }
 
 .footer-content p {
-    font-size: 14px;
+    font-size: 13px;
     color: var(--text-gray);
     font-family: var(--font-accent);
 }
 
 /* ==========================================================================
-   АДАПТИВНОСТЬ ПОД МОБИЛЬНЫЕ УСТРОЙСТВА
+   УЛУЧШЕННЫЕ МЕДИА-ЗАПРОСЫ (ПРАВИЛЬНЫЙ МОБИЛЬНЫЙ СТЭКИНГ)
    ========================================================================== */
 @media (max-width: 992px) {
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 40px;
     }
     .hero-content {
         text-align: center;
+        order: 1;
     }
-    .hero-title {
-        font-size: 54px;
+    .hero-image-slot {
+        order: 2;
+        max-width: 500px;
+        margin: 0 auto;
     }
-    .hero-desc {
-        margin-left: auto;
-        margin-right: auto;
+    .btn-premium {
+        width: 100%;
+        max-width: 340px;
     }
 }
 
-@media (max-width: 600px) {
-    .hero-title {
-        font-size: 42px;
-    }
-    .hero-desc {
-        font-size: 18px;
-    }
-    .section-center-header h2 {
-        font-size: 32px;
-    }
-    .booking-form {
-        padding: 30px 20px;
-    }
+@media (max-width: 768px) {
     .header-container {
         flex-direction: column;
-        gap: 15px;
+        align-items: center;
+        padding: 10px;
     }
     .luxury-nav {
         width: 100%;
         justify-content: center;
+        flex-wrap: wrap;
     }
     .luxury-nav a {
-        padding: 8px 12px;
-        font-size: 12px;
+        padding: 6px 12px;
+        font-size: 13px;
+    }
+    .content-section {
+        padding: 35px 15px;
+    }
+    .technique-section {
+        padding: 35px 20px;
+    }
+    .decorative-line {
+        margin: 25px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .cards-layout-three,
+    .cards-layout-four {
+        grid-template-columns: 1fr; /* Полное выстраивание в 1 колонку на смартфонах */
+    }
+    .orange-card,
+    .luxury-benefit-card {
+        padding: 24px 20px;
+    }
+    .booking-form {
+        padding: 30px 20px;
     }
 }
