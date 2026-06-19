@@ -1,39 +1,26 @@
 /* ==========================================================================
-   FEMININE & ELEGANT LUXURY DESIGN
+   LUXURY BEAUTY CORE CONFIGURATION
    ========================================================================== */
 :root {
-    /* Soft feminine color palette */
-    --bg-main: #F5F0EB;
-    --bg-warm-white: #FAF8F5;
-    --pastel-pink: #F8E8E8;
-    --soft-lavender: #E6E6FA;
-    --accent-gold: #D4AF37;
-    --accent-soft-gold: #E5C868;
-    --text-soft-brown: #5B4636;
-    --text-gray: #8B8B8B;
+    --bg-main: #F8F5F2;
+    --bg-warm-white: #FAF9F7;
+    --accent-gold: #C9A961;
+    --accent-bronze: #B59662;
+    --pastel-pink: #F5E6E3;
+    --soft-lavender: #E8E3F5;
+    --text-chocolate: #3E2723;
+    --text-gray: #6B6B6B;
     --white: #FFFFFF;
-    --white-glow: #FFFEFA;
-   
-    /* Feminine typography */
+
     --font-title: 'Playfair Display', serif;
     --font-body: 'Lato', sans-serif;
     --font-accent: 'Montserrat', sans-serif;
     --font-number: 'Oswald', sans-serif;
 
-    /* Soft elegant shadows */
-    --shadow-soft: 0 4px 20px rgba(0, 0, 0, 0.08);
-    --shadow-medium: 0 6px 30px rgba(0, 0, 0, 0.1);
-    --shadow-hover: 0 8px 35px rgba(212, 175, 55, 0.15);
-    --shadow-glow: 0 0 40px rgba(212, 175, 55, 0.1);
-    
-    /* Soft borders */
-    --border-soft: 1px solid rgba(212, 175, 55, 0.2);
-    --border-gold: 1px solid rgba(212, 175, 55, 0.3);
-    --border-pink: 1px solid rgba(248, 232, 232, 0.5);
-    
-    /* Gentle transitions */
-    --transition-gentle: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-smooth: all 0.5s ease;
+    --shadow-premium: 0 10px 40px rgba(62, 39, 27, 0.07);
+    --shadow-hover: 0 15px 50px rgba(201, 169, 97, 0.18);
+    --border-gold-light: 1px solid rgba(201, 169, 97, 0.25);
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 * {
@@ -51,9 +38,8 @@ body {
     color: var(--text-gray);
     font-family: var(--font-body);
     font-size: 18px;
-    line-height: 1.9;
+    line-height: 1.8;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
 #siteContainer {
@@ -66,113 +52,54 @@ body {
     overflow-x: hidden;
 }
 
-/* ==========================================================================
-   TYPOGRAPHY - FEMININE & ELEGANT
-   ========================================================================== */
-h1, h2, h3, h4, h5, h6 {
-    color: var(--text-soft-brown);
+h1, h2, h3, h4 {
+    color: var(--text-chocolate);
     font-family: var(--font-title);
-    font-weight: 500;
-    letter-spacing: 0.3px;
-}
-
-h1 {
-    font-size: clamp(36px, 5vw, 64px);
-    font-weight: 600;
-    line-height: 1.15;
-    margin-bottom: 20px;
-}
-
-h2 {
-    font-size: clamp(26px, 4vw, 38px);
-    font-weight: 500;
-    line-height: 1.25;
-    margin-bottom: 15px;
-}
-
-h3 {
-    font-size: 22px;
-    font-weight: 500;
-    line-height: 1.3;
-    margin-bottom: 12px;
-}
-
-h4 {
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 1.4;
-}
-
-p {
-    font-family: var(--font-body);
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 1.9;
-    color: var(--text-gray);
+    font-weight: 700;
 }
 
 .accent-oswald {
     font-family: var(--font-number);
-    font-weight: 600;
+    font-weight: 700;
     color: var(--accent-gold);
-    font-size: 1.15em;
-    letter-spacing: 0.5px;
+    font-size: 1.1em;
 }
 
 .icon-gold {
     color: var(--accent-gold);
 }
 
-/* ==========================================================================
-   DECORATIVE ELEMENTS
-   ========================================================================== */
 .decorative-line {
     height: 1px;
-    background: linear-gradient(90deg, transparent 0%, var(--accent-gold) 50%, transparent 100%);
+    background: var(--accent-gold);
     opacity: 0.3;
     margin: 60px auto;
     width: 85%;
-    max-width: 1000px;
-    position: relative;
+    max-width: 1200px;
 }
 
-.decorative-line::before {
-    content: '✦';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    color: var(--accent-gold);
-    font-size: 12px;
-    opacity: 0.5;
-    background: var(--bg-warm-white);
-    padding: 0 10px;
-}
-
-.decorative-flower {
-    text-align: center;
-    margin: 40px auto;
-    font-size: 20px;
-    color: var(--accent-gold);
-    opacity: 0.4;
+.section-subtitle {
+    font-size: 17px;
+    color: var(--text-gray);
+    margin-top: 10px;
+    font-family: var(--font-accent);
 }
 
 /* ==========================================================================
-   HEADER & NAVIGATION - SOFT & ELEGANT
+   HEADER & NAVIGATION
    ========================================================================== */
 .luxury-header {
-    background: rgba(250, 248, 245, 0.98);
-    backdrop-filter: blur(15px);
+    background: rgba(250, 249, 247, 0.95);
+    backdrop-filter: blur(12px);
     position: sticky;
     top: 0;
     z-index: 1000;
-    border-bottom: 1px solid rgba(248, 232, 232, 0.4);
-    padding: 18px 0;
-    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
+    border-bottom: 1px solid rgba(201, 169, 97, 0.12);
+    padding: 15px 0;
 }
 
 .header-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
     display: flex;
@@ -185,110 +112,72 @@ p {
 .logo-container {
     display: flex;
     align-items: center;
-    gap: 14px;
-}
-
-.logo-icon {
-    width: 42px;
-    height: 42px;
-    background: linear-gradient(135deg, var(--pastel-pink), var(--white));
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: var(--border-pink);
-    box-shadow: var(--shadow-soft);
+    gap: 12px;
 }
 
 .logo-icon i {
-    font-size: 20px;
+    font-size: 26px;
     color: var(--accent-gold);
-    opacity: 0.85;
+    opacity: 0.9;
 }
 
 .logo-text {
-    font-size: 10px;
+    font-size: 11px;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
     color: var(--text-gray);
-    line-height: 1.3;
-    font-family: var(--font-accent);
+    line-height: 1.2;
 }
 
 .logo-text strong {
     font-family: var(--font-title);
-    font-size: 22px;
-    color: var(--text-soft-brown);
+    font-size: 20px;
+    color: var(--text-chocolate);
     text-transform: none;
     letter-spacing: 0;
     display: block;
-    font-weight: 600;
 }
 
 .luxury-nav {
     display: flex;
-    gap: 8px;
+    gap: 5px;
 }
 
 .luxury-nav a {
     text-decoration: none;
-    color: var(--text-soft-brown);
+    color: var(--text-chocolate);
     font-family: var(--font-accent);
-    font-size: 13px;
-    font-weight: 400;
-    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 16px;
     border-radius: 30px;
     display: flex;
     align-items: center;
-    gap: 7px;
-    transition: var(--transition-gentle);
-    background: transparent;
-    border: 1px solid transparent;
-}
-
-.luxury-nav a i {
-    font-size: 13px;
-    color: var(--accent-gold);
-    opacity: 0.75;
+    gap: 6px;
+    transition: var(--transition-smooth);
 }
 
 .luxury-nav a:hover,
 .luxury-nav a.active {
-    background: linear-gradient(135deg, var(--pastel-pink), var(--white));
-    border: var(--border-pink);
-    box-shadow: var(--shadow-soft);
+    background: var(--pastel-pink);
+    box-shadow: 0 4px 15px rgba(62, 39, 35, 0.04);
 }
 
 /* ==========================================================================
-   HERO SECTION - FEMININE & AIRY
+   HERO SECTION
    ========================================================================== */
 .hero-section {
-    background: linear-gradient(135deg, var(--bg-main) 0%, var(--pastel-pink) 50%, var(--bg-warm-white) 100%);
+    background: linear-gradient(135deg, var(--bg-main) 0%, var(--pastel-pink) 100%);
     padding: 80px 20px;
-    position: relative;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(circle at 20% 80%, rgba(248, 232, 232, 0.4) 0%, transparent 50%),
-                radial-gradient(circle at 80% 20%, rgba(230, 230, 250, 0.3) 0%, transparent 50%);
-    opacity: 0.5;
 }
 
 .hero-container {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1.1fr 0.9fr;
     align-items: center;
-    gap: 60px;
-    position: relative;
-    z-index: 1;
+    gap: 40px;
 }
 
 .hero-content {
@@ -299,79 +188,91 @@ p {
     font-family: var(--font-accent);
     text-transform: uppercase;
     font-size: 11px;
-    letter-spacing: 2.5px;
-    color: var(--accent-gold);
+    letter-spacing: 2px;
+    color: var(--accent-bronze);
     background: var(--white);
-    padding: 7px 18px;
+    padding: 6px 16px;
     border-radius: 50px;
     display: inline-block;
-    margin-bottom: 22px;
-    border: var(--border-soft);
-    box-shadow: var(--shadow-soft);
-    font-weight: 400;
+    margin-bottom: 20px;
+    border: 1px solid rgba(201, 169, 97, 0.2);
 }
 
 .hero-title {
-    font-size: clamp(36px, 5vw, 64px);
+    font-size: clamp(32px, 5vw, 56px);
     line-height: 1.15;
-    margin-bottom: 22px;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    margin-bottom: 20px;
 }
 
 .hero-desc {
-    font-size: clamp(17px, 2.5vw, 21px);
-    color: var(--text-gray);
-    margin-bottom: 28px;
+    font-size: clamp(17px, 2.2vw, 21px);
+    color: var(--text-chocolate);
+    margin-bottom: 30px;
     font-weight: 300;
-    line-height: 1.8;
 }
 
-.hero-price {
-    margin-bottom: 38px;
-    padding: 18px 24px;
-    background: var(--white-glow);
-    border-radius: 16px;
-    border: var(--border-soft);
-    display: inline-block;
-    box-shadow: var(--shadow-soft);
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
 }
 
-.price-label {
-    font-family: var(--font-accent);
-    font-size: 12px;
-    color: var(--text-gray);
-    margin-right: 12px;
-    font-weight: 400;
-}
-
-.price-value {
-    font-family: var(--font-title);
-    font-size: 30px;
-    color: var(--accent-gold);
+.hero-buttons .btn-premium {
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-bronze));
+    color: var(--white);
+    padding: 14px 32px;
+    border-radius: 14px;
     font-weight: 600;
-    letter-spacing: 0.3px;
+    font-family: var(--font-accent);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: var(--transition-smooth);
+    box-shadow: 0 8px 25px rgba(201, 169, 97, 0.25);
+}
+
+.hero-buttons .btn-premium:hover {
+    transform: scale(1.02);
+    box-shadow: 0 12px 35px rgba(201, 169, 97, 0.4);
+}
+
+.btn-secondary {
+    background: var(--white);
+    color: var(--text-chocolate);
+    padding: 14px 32px;
+    border-radius: 14px;
+    font-weight: 600;
+    font-family: var(--font-accent);
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    border: 1px solid rgba(201, 169, 97, 0.3);
+    transition: var(--transition-smooth);
+}
+
+.btn-secondary:hover {
+    background: var(--pastel-pink);
+    border-color: var(--accent-gold);
+}
+
+.hero-mini-note {
+    font-size: 14px;
+    color: var(--text-gray);
+    font-family: var(--font-accent);
 }
 
 .hero-image-slot {
     position: relative;
-    border-radius: 28px;
+    border-radius: 24px;
     overflow: hidden;
-    box-shadow: var(--shadow-medium);
-    border: var(--border-pink);
+    box-shadow: var(--shadow-premium);
+    border: var(--border-gold-light);
     width: 100%;
-    aspect-ratio: 4 / 3.5;
-    background: var(--pastel-pink);
-}
-
-.hero-image-slot::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
+    aspect-ratio: 4 / 3;
+    background: #E8DCD8;
 }
 
 .hero-image-slot img {
@@ -379,418 +280,499 @@ p {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: var(--transition-smooth);
-}
-
-.hero-image-slot:hover img {
-    transform: scale(1.02);
 }
 
 /* ==========================================================================
-   BUTTONS - GENTLE & ELEGANT
-   ========================================================================== */
-.btn-premium {
-    background: linear-gradient(135deg, var(--accent-gold), var(--accent-soft-gold));
-    color: var(--white);
-    padding: 18px 42px;
-    border-radius: 20px;
-    font-weight: 500;
-    font-family: var(--font-accent);
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    border: none;
-    cursor: pointer;
-    letter-spacing: 0.8px;
-    transition: var(--transition-gentle);
-    box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
-    width: auto;
-    font-size: 14px;
-}
-
-.btn-premium:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 12px 35px rgba(212, 175, 55, 0.3);
-}
-
-/* ==========================================================================
-   CONTENT SECTIONS - SOFT & AIRY
+   CONTENT SECTIONS & CARDS
    ========================================================================== */
 .content-section {
-    max-width: 1100px;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 70px 20px;
+    padding: 60px 20px;
 }
 
 .section-center-header {
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 40px;
 }
 
 .section-center-header h2 {
-    font-size: clamp(26px, 4vw, 38px);
-    margin-top: 15px;
-    font-weight: 500;
+    font-size: clamp(28px, 4vw, 40px);
+    margin-top: 12px;
 }
 
 .badge {
     background: var(--white);
-    border: var(--border-soft);
-    color: var(--text-soft-brown);
-    padding: 7px 18px;
+    border: var(--border-gold-light);
+    color: var(--text-chocolate);
+    padding: 6px 16px;
     border-radius: 50px;
-    font-size: 12px;
+    font-size: 13px;
     font-family: var(--font-accent);
-    font-weight: 400;
+    font-weight: 500;
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    box-shadow: var(--shadow-soft);
-    letter-spacing: 0.5px;
 }
 
-/* ==========================================================================
-   CARDS - FEMININE & ROUND
-   ========================================================================== */
 .cards-layout-three {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
-    gap: 26px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
 }
 
-.cards-layout-four {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-    gap: 22px;
-}
-
-.pale-card {
+.orange-card {
     background: var(--white);
-    border: var(--border-soft);
-    border-radius: 20px;
-    padding: 34px;
-    box-shadow: var(--shadow-soft);
-    transition: var(--transition-gentle);
+    border: var(--border-gold-light);
+    border-radius: 16px;
+    padding: 30px;
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition-smooth);
     position: relative;
     display: flex;
     flex-direction: column;
 }
 
-.pale-card:hover {
-    transform: translateY(-5px);
+.orange-card:hover {
+    transform: translateY(-4px) scale(1.01);
     box-shadow: var(--shadow-hover);
     border-color: var(--accent-gold);
 }
 
 .card-icon-wrapper {
-    width: 54px;
-    height: 54px;
-    background: linear-gradient(135deg, var(--pastel-pink), var(--white));
+    width: 50px;
+    height: 50px;
+    background: var(--bg-main);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 22px;
-    border: var(--border-pink);
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+    margin-bottom: 20px;
 }
 
 .card-icon-wrapper i {
-    font-size: 22px;
+    font-size: 20px;
     color: var(--accent-gold);
-    opacity: 0.75;
+    opacity: 0.85;
 }
 
-.pale-card p {
-    font-size: 16px;
+.orange-card p {
+    font-size: 17px;
     color: var(--text-gray);
-    line-height: 1.7;
-    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* PROBLEM CARDS */
+.problem-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 /* ==========================================================================
-   BENEFITS SECTION - ELEGANT
+   TECHNIQUE SECTION
    ========================================================================== */
 .technique-section {
     background: linear-gradient(180deg, var(--white) 0%, var(--pastel-pink) 100%);
-    border-radius: 28px;
-    padding: 70px 35px;
-    box-shadow: var(--shadow-soft);
+    border-radius: 24px;
+    padding: 60px 30px;
+}
+
+.technique-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.technique-text .technique-desc {
+    font-size: 17px;
+    color: var(--text-gray);
+    margin-bottom: 20px;
+}
+
+.benefits-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
 }
 
 .luxury-benefit-card {
     background: var(--white);
-    border: var(--border-soft);
-    border-radius: 20px;
-    padding: 30px;
-    box-shadow: var(--shadow-soft);
-    transition: var(--transition-gentle);
+    border: var(--border-gold-light);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition-smooth);
 }
 
 .luxury-benefit-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-4px);
     box-shadow: var(--shadow-hover);
-    border-color: var(--accent-gold);
 }
 
 .benefit-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .benefit-header i {
-    font-size: 26px;
-    opacity: 0.75;
+    font-size: 24px;
+    opacity: 0.85;
 }
 
 .benefit-number {
-    font-size: 12px;
+    font-size: 13px;
     text-transform: uppercase;
     font-family: var(--font-accent);
-    color: var(--accent-gold);
-    font-weight: 500;
-    letter-spacing: 0.5px;
+    color: var(--accent-bronze);
+    font-weight: 600;
 }
 
 .luxury-benefit-card h3 {
-    font-size: 19px;
-    margin-bottom: 12px;
-    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .luxury-benefit-card p {
     font-size: 15px;
     color: var(--text-gray);
-    line-height: 1.7;
-    font-weight: 300;
+    line-height: 1.6;
 }
 
-/* ==========================================================================
-   GUARANTEES SECTION - SOFT
-   ========================================================================== */
-.guarantees-section {
-    background: linear-gradient(180deg, var(--pastel-pink) 0%, var(--bg-main) 100%);
-    border-radius: 28px;
-    padding: 70px 35px;
-    box-shadow: var(--shadow-soft);
-}
-
-.guarantee-card {
-    background: var(--white);
-    border: var(--border-soft);
+.technique-image {
     border-radius: 20px;
-    padding: 34px;
-    box-shadow: var(--shadow-soft);
-    transition: var(--transition-gentle);
-    text-align: center;
-}
-
-.guarantee-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--accent-gold);
-}
-
-.guarantee-icon {
-    font-size: 36px;
-    margin-bottom: 18px;
-    display: block;
-}
-
-.guarantee-card h4 {
-    font-size: 17px;
-    margin-bottom: 12px;
-    font-family: var(--font-accent);
-    font-weight: 500;
-}
-
-.guarantee-card p {
-    font-size: 15px;
-    color: var(--text-gray);
-    line-height: 1.7;
-    font-weight: 300;
-}
-
-/* ==========================================================================
-   MASTER SECTION - ELEGANT PORTRAIT
-   ========================================================================== */
-.master-section {
-    background: var(--white);
-    border-radius: 28px;
-    padding: 70px 35px;
-    box-shadow: var(--shadow-soft);
-}
-
-.master-container {
-    display: grid;
-    grid-template-columns: 0.8fr 1.2fr;
-    gap: 60px;
-    align-items: center;
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.master-image {
-    border-radius: 24px;
     overflow: hidden;
-    box-shadow: var(--shadow-medium);
-    border: var(--border-pink);
-    position: relative;
+    box-shadow: var(--shadow-premium);
+    border: var(--border-gold-light);
 }
 
-.master-image::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
-}
-
-.master-image img {
+.technique-image img {
     width: 100%;
     height: auto;
-    object-fit: cover;
     display: block;
-    transition: var(--transition-smooth);
-}
-
-.master-image:hover img {
-    transform: scale(1.02);
-}
-
-.master-content .badge {
-    margin-bottom: 18px;
-}
-
-.master-content h2 {
-    font-size: 34px;
-    margin-bottom: 12px;
-    font-weight: 500;
-}
-
-.master-name {
-    font-family: var(--font-accent);
-    font-size: 20px;
-    color: var(--accent-gold);
-    font-weight: 500;
-    margin-bottom: 18px;
-    font-style: italic;
-    letter-spacing: 0.3px;
-}
-
-.master-desc {
-    font-size: 16px;
-    color: var(--text-gray);
-    line-height: 1.8;
-    margin-bottom: 28px;
-    font-weight: 300;
-}
-
-.master-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-}
-
-.stat-item {
-    text-align: center;
-    padding: 15px;
-    background: linear-gradient(135deg, var(--pastel-pink), var(--white));
-    border-radius: 16px;
-    border: var(--border-pink);
-}
-
-.stat-number {
-    font-size: 34px;
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 600;
-}
-
-.stat-label {
-    font-size: 12px;
-    color: var(--text-gray);
-    font-family: var(--font-accent);
-    font-weight: 400;
-    letter-spacing: 0.3px;
 }
 
 /* ==========================================================================
-   REVIEWS SECTION - FEMININE
+   PRICES SECTION
+   ========================================================================== */
+.prices-section {
+    background: var(--bg-warm-white);
+}
+
+.prices-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+.price-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.price-desc {
+    font-size: 15px;
+    color: var(--text-gray);
+    margin-bottom: 15px;
+}
+
+.price-tag {
+    font-family: var(--font-title);
+    font-size: 28px;
+    color: var(--text-chocolate);
+    margin: 15px 0 20px;
+    font-weight: 700;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.prices-note {
+    text-align: center;
+    font-size: 15px;
+    color: var(--text-gray);
+    margin-top: 20px;
+    font-family: var(--font-accent);
+}
+
+/* ==========================================================================
+   REVIEWS SECTION
    ========================================================================== */
 .reviews-section {
-    background: linear-gradient(180deg, var(--bg-main) 0%, var(--soft-lavender) 100%);
-    border-radius: 28px;
-    padding: 70px 35px;
-    box-shadow: var(--shadow-soft);
+    background: var(--bg-warm-white);
+}
+
+.reviews-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
 .review-card {
-    background: var(--white);
-    border: var(--border-soft);
-    border-radius: 20px;
-    padding: 34px;
-    box-shadow: var(--shadow-soft);
-    transition: var(--transition-gentle);
-}
-
-.review-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-hover);
-    border-color: var(--accent-gold);
+    position: relative;
 }
 
 .review-header {
     display: flex;
     align-items: center;
-    gap: 16px;
-    margin-bottom: 22px;
+    gap: 12px;
+    margin-bottom: 15px;
 }
 
 .review-avatar {
-    width: 54px;
-    height: 54px;
+    width: 44px;
+    height: 44px;
+    background: var(--pastel-pink);
     border-radius: 50%;
-    overflow: hidden;
-    border: 2px solid var(--accent-gold);
-    box-shadow: var(--shadow-soft);
-}
-
-.review-avatar img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.review-info h4 {
-    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-family: var(--font-accent);
-    margin-bottom: 5px;
-    font-weight: 500;
+    font-weight: 600;
+    color: var(--text-chocolate);
 }
 
-.review-stars {
-    color: var(--accent-gold);
-    font-size: 14px;
-}
-
-.review-stars i {
-    margin-right: 2px;
+.review-name {
+    font-family: var(--font-accent);
+    font-weight: 600;
+    color: var(--text-chocolate);
+    font-size: 16px;
 }
 
 .review-text {
-    font-size: 15px;
+    font-size: 16px;
     color: var(--text-gray);
-    line-height: 1.8;
-    font-weight: 300;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.review-duration {
+    font-size: 14px;
+    color: var(--text-gray);
+    font-family: var(--font-accent);
 }
 
 /* ==========================================================================
-   BOOKING FORM - GENTLE & ELEGANT
+   BEFORE / AFTER SECTION
+   ========================================================================== */
+.before-after-section {
+    background: var(--bg-warm-white);
+}
+
+.before-after-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.before-after-card {
+    background: var(--white);
+    border: var(--border-gold-light);
+    border-radius: 16px;
+    padding: 20px;
+    box-shadow: var(--shadow-premium);
+}
+
+.ba-image {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.ba-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.ba-label {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: var(--text-chocolate);
+    color: var(--white);
+    font-size: 12px;
+    font-family: var(--font-accent);
+    padding: 4px 10px;
+    border-radius: 10px;
+}
+
+.before-label {
+    background: #5C4033;
+}
+
+.after-label {
+    background: var(--accent-gold);
+}
+
+.ba-desc {
+    font-size: 14px;
+    color: var(--text-gray);
+    font-family: var(--font-accent);
+    line-height: 1.5;
+}
+
+/* ==========================================================================
+   ABOUT SECTION
+   ========================================================================== */
+.about-section {
+    background: linear-gradient(180deg, var(--white) 0%, var(--pastel-pink) 100%);
+    border-radius: 24px;
+    padding: 60px 30px;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+.about-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow-premium);
+    border: var(--border-gold-light);
+}
+
+.about-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.about-text h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.about-desc {
+    font-size: 17px;
+    color: var(--text-gray);
+    margin-bottom: 15px;
+}
+
+.certificates {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cert-item {
+    font-size: 15px;
+    color: var(--text-gray);
+    font-family: var(--font-accent);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.cert-item i {
+    font-size: 18px;
+}
+
+/* ==========================================================================
+   CONTACTS SECTION
+   ========================================================================== */
+.contacts-section {
+    background: var(--bg-warm-white);
+}
+
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 24px;
+}
+
+.contact-item {
+    background: var(--white);
+    border: var(--border-gold-light);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow-premium);
+    display: flex;
+    gap: 15px;
+    align-items: flex-start;
+}
+
+.contact-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--bg-main);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-icon i {
+    font-size: 18px;
+}
+
+.contact-text h3 {
+    font-size: 18px;
+    margin-bottom: 6px;
+}
+
+.contact-text p {
+    font-size: 15px;
+    color: var(--text-gray);
+}
+
+.contact-text a {
+    color: var(--text-chocolate);
+    text-decoration: none;
+}
+
+.contact-text a:hover {
+    color: var(--accent-gold);
+}
+
+.social-item {
+    flex-direction: column;
+}
+
+.social-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.social-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: 12px;
+    color: var(--white);
+    text-decoration: none;
+    font-family: var(--font-accent);
+    font-size: 14px;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.social-btn.instagram {
+    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+
+.social-btn.telegram {
+    background: #0088cc;
+}
+
+.social-btn.whatsapp {
+    background: #25D366;
+}
+
+.social-btn:hover {
+    transform: translateY(-2px);
+    opacity: 0.95;
+}
+
+/* ==========================================================================
+   BOOKING FORM
    ========================================================================== */
 .booking-section {
     display: flex;
@@ -799,179 +781,130 @@ p {
 
 .booking-form {
     background: var(--white);
-    border: var(--border-soft);
-    border-radius: 24px;
-    padding: 55px 45px;
-    box-shadow: var(--shadow-medium);
+    border: var(--border-gold-light);
+    border-radius: 20px;
+    padding: 40px 30px;
+    box-shadow: var(--shadow-premium);
     max-width: 550px;
     width: 100%;
-    position: relative;
-}
-
-.booking-form::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(135deg, var(--accent-gold), transparent);
-    opacity: 0.1;
-    border-radius: 26px;
-    z-index: -1;
 }
 
 .form-header {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .form-header i {
-    font-size: 34px;
-    margin-bottom: 12px;
-    opacity: 0.75;
-    display: block;
+    font-size: 28px;
+    margin-bottom: 10px;
 }
 
 .form-header h2 {
-    font-size: 32px;
-    margin-bottom: 12px;
-    font-weight: 500;
+    font-size: 28px;
+    margin-bottom: 8px;
 }
 
 .form-header p {
     font-size: 15px;
-    font-weight: 300;
 }
 
 .styled-luxury-form .form-group {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 6px;
 }
 
 .styled-luxury-form label {
     font-family: var(--font-accent);
-    font-size: 12px;
-    font-weight: 400;
-    color: var(--text-soft-brown);
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-chocolate);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
-.styled-luxury-form input {
+.styled-luxury-form input,
+.form-select {
     background: var(--bg-warm-white);
-    border: var(--border-soft);
-    border-radius: 14px;
-    padding: 17px 18px;
+    border: 1px solid #E0E0E0;
+    border-radius: 10px;
+    padding: 14px 16px;
     font-family: var(--font-body);
     font-size: 16px;
-    color: var(--text-soft-brown);
-    transition: var(--transition-gentle);
+    color: var(--text-chocolate);
+    transition: var(--transition-smooth);
     width: 100%;
-    font-weight: 300;
 }
 
-.styled-luxury-form input:focus {
-    border: var(--border-gold);
+.form-select {
+    cursor: pointer;
+}
+
+.styled-luxury-form input:focus,
+.form-select:focus {
+    border: 1px solid var(--accent-gold);
     outline: none;
-    box-shadow: 0 0 0 4px rgba(212, 175, 55, 0.1);
+    box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.15);
     background: var(--white);
 }
 
 .styled-luxury-form .btn-premium {
     width: 100%;
-    margin-top: 12px;
+    margin-top: 10px;
 }
 
-/* ==========================================================================
-   FOOTER - SOFT & ELEGANT
-   ========================================================================== */
-.luxury-footer {
-    background: var(--white);
-    border-top: 1px solid rgba(248, 232, 232, 0.5);
-    padding: 45px 20px;
-    text-align: center;
-    margin-top: auto;
-    box-shadow: 0 -2px 15px rgba(0, 0, 0, 0.03);
-}
-
-.footer-content {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.footer-info {
-    margin-bottom: 28px;
-}
-
-.footer-title {
-    font-family: var(--font-title);
-    font-size: 18px;
-    color: var(--text-soft-brown);
-    font-weight: 600;
-    margin-bottom: 18px;
-    letter-spacing: 0.3px;
-}
-
-.footer-contact {
-    font-size: 14px;
-    color: var(--text-gray);
-    font-family: var(--font-accent);
-    margin-bottom: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    font-weight: 300;
-}
-
-.footer-contact i {
-    font-size: 14px;
-    opacity: 0.75;
-}
-
-.footer-copyright {
+.form-note {
     font-size: 13px;
     color: var(--text-gray);
     font-family: var(--font-accent);
-    opacity: 0.6;
-    font-weight: 300;
+    margin-top: 10px;
+    text-align: center;
 }
 
 /* ==========================================================================
-   PRODUCTS SECTION
+   PRODUCTS & TRAINING
    ========================================================================== */
 .products-container-wrapper {
-    max-width: 1100px;
-    margin: 0 auto;
+    background: var(--bg-warm-white);
+    border-radius: 24px;
+    padding: 40px 30px;
 }
 
 .category-title-luxury {
     font-size: 24px;
-    margin-bottom: 28px;
+    margin-bottom: 20px;
     display: flex;
     align-items: center;
     gap: 12px;
-    font-weight: 500;
 }
 
-.category-title-luxury i {
-    color: var(--accent-gold);
+.product-luxury-item {
+    position: relative;
+}
+
+.product-image {
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 15px;
+    border: var(--border-gold-light);
+}
+
+.product-image img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .product-luxury-item h4 {
     font-family: var(--font-accent);
     font-size: 18px;
-    margin-bottom: 12px;
-    font-weight: 500;
+    margin-bottom: 10px;
 }
 
 .product-luxury-item p {
     font-size: 15px;
-    margin-bottom: 22px;
-    font-weight: 300;
+    margin-bottom: 20px;
 }
 
 .btn-ref {
@@ -980,126 +913,158 @@ p {
     justify-content: center;
     gap: 8px;
     width: 100%;
-    padding: 13px;
-    border-radius: 14px;
+    padding: 12px;
+    border-radius: 12px;
     color: var(--white);
     text-decoration: none;
-    font-weight: 400;
+    font-weight: 500;
     font-family: var(--font-accent);
     font-size: 14px;
     margin-top: auto;
-    transition: var(--transition-gentle);
-    border: none;
-    cursor: pointer;
+    transition: var(--transition-smooth);
 }
 
-.btn-ref.wb-ref { 
-    background: linear-gradient(135deg, #5a1a8a, #481173); 
-}
-.btn-ref.ozon-ref { 
-    background: linear-gradient(135deg, #1a6bff, #005bff); 
-}
-.btn-ref:hover { 
-    transform: translateY(-2px); 
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+.btn-ref.wb-ref { background: #481173; }
+.btn-ref.ozon-ref { background: #005bff; }
+.btn-ref:hover { transform: translateY(-2px); opacity: 0.95; }
+
+.products-note {
+    background: var(--white);
+    border: var(--border-gold-light);
+    border-radius: 16px;
+    padding: 20px;
+    margin-top: 30px;
+    text-align: center;
 }
 
-/* ==========================================================================
-   TRAINING SECTION
-   ========================================================================== */
+.products-note p {
+    font-size: 15px;
+    color: var(--text-gray);
+}
+
+.luxury-course-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
 .course-tag {
+    align-self: flex-start;
     font-family: var(--font-accent);
     font-size: 11px;
     text-transform: uppercase;
-    background: linear-gradient(135deg, var(--soft-lavender), var(--white));
-    padding: 5px 14px;
+    background: var(--soft-lavender);
+    padding: 4px 12px;
     border-radius: 20px;
-    color: var(--text-soft-brown);
-    margin-bottom: 12px;
-    display: inline-block;
-    font-weight: 400;
-    letter-spacing: 0.5px;
-    border: 1px solid rgba(230, 230, 250, 0.5);
+    color: var(--text-chocolate);
+    margin-bottom: 10px;
 }
 
 .course-tag.golden-tag {
-    background: linear-gradient(135deg, #F5E6A3, #E5C868);
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    background: linear-gradient(135deg, #F3E1C3, #EAD4A4);
 }
 
 .course-time {
     font-size: 15px;
-    margin-bottom: 16px;
-    font-weight: 300;
+    margin-bottom: 15px;
 }
 
 .course-time i {
     color: var(--accent-gold);
-    margin-right: 7px;
+    margin-right: 6px;
 }
 
 .course-info-text {
-    font-size: 15px;
-    margin-bottom: 22px;
-    font-weight: 300;
+    font-size: 15px !important;
+    margin-bottom: 20px;
 }
 
 .course-price-tag {
     font-family: var(--font-title);
-    font-size: 30px;
-    color: var(--text-soft-brown);
+    font-size: 26px;
+    color: var(--text-chocolate);
     margin-top: auto;
-    margin-bottom: 22px;
-    font-weight: 600;
-    letter-spacing: 0.3px;
+    margin-bottom: 20px;
+    font-weight: 700;
 }
 
 .luxury-course-card .btn-premium {
     width: 100%;
 }
 
+.training-features {
+    background: var(--white);
+    border: var(--border-gold-light);
+    border-radius: 20px;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+.training-features h3 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 15px;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 15px;
+    color: var(--text-gray);
+}
+
+.feature-item i {
+    font-size: 18px;
+}
+
 /* ==========================================================================
-   MEDIA QUERIES - MOBILE ADAPTIVE
+   FOOTER
+   ========================================================================== */
+.luxury-footer {
+    background: var(--white);
+    border-top: 1px solid rgba(201, 169, 97, 0.12);
+    padding: 25px 20px;
+    text-align: center;
+    margin-top: auto;
+}
+
+.footer-content p {
+    font-size: 13px;
+    color: var(--text-gray);
+    font-family: var(--font-accent);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES
    ========================================================================== */
 @media (max-width: 992px) {
     .hero-container {
         grid-template-columns: 1fr;
         text-align: center;
-        gap: 50px;
     }
-    
     .hero-content {
         text-align: center;
         order: 1;
     }
-    
     .hero-image-slot {
         order: 2;
-        max-width: 480px;
+        max-width: 500px;
         margin: 0 auto;
     }
-    
-    .btn-premium {
-        width: 100%;
-        max-width: 320px;
+    .hero-buttons {
+        justify-content: center;
     }
-    
-    .hero-price {
-        width: auto;
-    }
-    
-    .master-container {
+    .technique-grid {
         grid-template-columns: 1fr;
-        text-align: center;
-        gap: 40px;
     }
-    
-    .master-stats {
-        grid-template-columns: repeat(3, 1fr);
-    }
-    
-    .hero-title {
-        font-size: 48px;
+    .about-grid {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -1107,98 +1072,53 @@ p {
     .header-container {
         flex-direction: column;
         align-items: center;
-        padding: 12px;
-        gap: 12px;
+        padding: 10px;
     }
-    
     .luxury-nav {
         width: 100%;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 6px;
     }
-    
     .luxury-nav a {
-        padding: 8px 14px;
-        font-size: 12px;
+        padding: 6px 12px;
+        font-size: 13px;
     }
-    
     .content-section {
-        padding: 50px 15px;
+        padding: 40px 15px;
     }
-    
     .technique-section,
-    .guarantees-section,
-    .master-section,
-    .reviews-section {
-        padding: 50px 20px;
+    .about-section {
+        padding: 40px 20px;
     }
-    
     .decorative-line {
         margin: 40px auto;
     }
-    
-    .master-stats {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-    
-    .section-center-header h2 {
-        font-size: 28px;
-    }
-    
     .hero-title {
-        font-size: 40px;
-    }
-    
-    .hero-desc {
-        font-size: 17px;
-    }
-    
-    .booking-form {
-        padding: 45px 30px;
+        font-size: 28px;
     }
 }
 
 @media (max-width: 480px) {
     .cards-layout-three,
-    .cards-layout-four {
+    .benefits-list,
+    .prices-grid,
+    .reviews-grid,
+    .before-after-grid,
+    .contacts-grid,
+    .features-grid {
         grid-template-columns: 1fr;
     }
-    
-    .pale-card,
+    .orange-card,
     .luxury-benefit-card,
-    .guarantee-card,
-    .review-card,
-    .product-luxury-item {
-        padding: 28px 22px;
-    }
-    
     .booking-form {
-        padding: 40px 24px;
+        padding: 24px 20px;
     }
-    
-    .hero-title {
-        font-size: 34px;
+    .hero-buttons {
+        flex-direction: column;
+        gap: 10px;
     }
-    
-    .hero-price {
-        padding: 14px 18px;
-    }
-    
-    .price-value {
-        font-size: 26px;
-    }
-    
-    .section-center-header h2 {
-        font-size: 26px;
-    }
-    
-    .form-header h2 {
-        font-size: 28px;
-    }
-    
-    .content-section {
-        padding: 40px 15px;
+    .hero-buttons .btn-premium,
+    .btn-secondary {
+        width: 100%;
     }
 }
