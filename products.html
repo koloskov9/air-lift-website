@@ -2,58 +2,80 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Продукты для домашнего ухода — Air Root</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        
+    <div id="siteContainer">
+       
         <header>
-            <div class="logo">
-                <i class="fas fa-feather-alt"></i>
-                <div class="logo-text">Air <strong>Root</strong></div>
+            <div class="logo-container">
+                <div class="logo-icon"><i class="fa-solid fa-feather"></i></div>
+                <div class="logo-text">Авторская техника<br><strong>Air Root</strong></div>
             </div>
             <nav>
-                <a href="index.html">Главная</a>
-                <a href="products.html">Продукты</a>
-                <a href="training.html">Обучение</a>
-                <a href="index.html#booking">Запись</a>
+                <a href="index.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Процедура</a>
+                <a href="training.html"><i class="fa-solid fa-graduation-cap"></i> Обучение</a>
+                <a href="products.html" class="active"><i class="fa-solid fa-droplet"></i> Уход</a>
             </nav>
         </header>
 
-        <section style="padding: 80px 25px 60px;">
-            <h1 style="text-align:center; font-size: 38px; margin-bottom: 50px;">Домашний уход</h1>
-            
-            <div class="care-grid">
-                <div class="card">
-                    <h3>Для поддержания объёма</h3>
-                    <ul>
-                        <li>Сухой шампунь премиум</li>
-                        <li>Прикорневой спрей-активатор</li>
-                        <li>Пудра для объёма</li>
-                        <li>Термозащита лёгкой фиксации</li>
-                    </ul>
+        <div class="content-block section-intro-block">
+            <div class="section-header">
+                <i class="fas fa-droplet"></i>
+                <h2>Домашний уход</h2>
+            </div>
+            <p class="section-desc-text">Правильно подобранные средства сохраняют форму прикорневого объёма и бережно ухаживают за структурой волос.</p>
+        </div>
+
+        <div class="content-block products-container">
+           
+            <h3 class="category-title"><i class="fa-solid fa-star text-gold"></i> Для поддержания объёма</h3>
+            <div class="products-grid">
+               
+                <div class="product-item">
+                    <div class="product-meta">
+                        <h4>Сухой шампунь премиум</h4>
+                        <p>Абсорбирует кожный себум, мгновенно освежает укладку и приподнимает волосы.</p>
+                    </div>
+                    <a href="#" target="_blank" class="btn-ref wb-ref"><i class="fa-solid fa-bag-shopping"></i> Купить на WB</a>
                 </div>
-                
-                <div class="card">
-                    <h3>Восстановление и питание</h3>
-                    <ul>
-                        <li>Маска для прикорневой зоны</li>
-                        <li>Сыворотка с кератином</li>
-                        <li>Несмываемый кондиционер</li>
-                    </ul>
+
+                <div class="product-item">
+                    <div class="product-meta">
+                        <h4>Прикорневой спрей-активатор</h4>
+                        <p>Фиксирует воздушную структуру у корней, защищая от влажности.</p>
+                    </div>
+                    <a href="#" target="_blank" class="btn-ref ozon-ref"><i class="fa-solid fa-cart-shopping"></i> Найти на Ozon</a>
                 </div>
+
             </div>
 
-            <div style="text-align:center; margin: 50px 0;">
-                <a href="index.html#booking" class="btn btn-primary">Получить индивидуальную подборку</a>
+            <h3 class="category-title" style="margin-top: 35px;"><i class="fa-solid fa-sparkles text-gold"></i> Восстановление и питание</h3>
+            <div class="products-grid">
+               
+                <div class="product-item">
+                    <div class="product-meta">
+                        <h4>Легкая маска для корней</h4>
+                        <p>Насыщает витаминами без утяжеления тонкой структуры волос.</p>
+                    </div>
+                    <a href="#" target="_blank" class="btn-ref wb-ref"><i class="fa-solid fa-bag-shopping"></i> Купить на WB</a>
+                </div>
+
             </div>
-        </section>
+
+            <div class="custom-cta-box">
+                <p>Нужна точная схема ухода под ваш тип кожи головы?</p>
+                <a href="index.html#order" class="btn-primary">Получить подборку</a>
+            </div>
+
+        </div>
 
         <footer>
-            <p><strong>Air Root</strong> — студия прикорневого объёма</p>
+            <div><i class="fa-solid fa-feather"></i> Авторская техника Air Root • 2026</div>
         </footer>
     </div>
 </body>
