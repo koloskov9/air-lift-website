@@ -2,52 +2,60 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes">
     <title>Обучение Air Root — Стать мастером прикорневого объёма</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Prata&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
-        
+    <div id="siteContainer">
+       
         <header>
-            <div class="logo">
-                <i class="fas fa-feather-alt"></i>
-                <div class="logo-text">Air <strong>Root</strong></div>
+            <div class="logo-container">
+                <div class="logo-icon"><i class="fa-solid fa-feather"></i></div>
+                <div class="logo-text">Авторская техника<br><strong>Air Root</strong></div>
             </div>
             <nav>
-                <a href="index.html">Главная</a>
-                <a href="products.html">Продукты</a>
-                <a href="training.html">Обучение</a>
-                <a href="index.html#booking">Запись</a>
+                <a href="index.html"><i class="fa-solid fa-wand-magic-sparkles"></i> Процедура</a>
+                <a href="training.html" class="active"><i class="fa-solid fa-graduation-cap"></i> Обучение</a>
+                <a href="products.html"><i class="fa-solid fa-droplet"></i> Уход</a>
             </nav>
         </header>
 
-        <section style="padding: 80px 25px;">
-            <h1 style="text-align:center; font-size: 38px; margin-bottom: 50px;">Обучение для мастеров</h1>
-            
-            <div class="training-grid">
-                <div class="card">
-                    <h3>Интенсив Мастер-класс</h3>
-                    <p>1 день • Теория + практика на 2 моделях</p>
-                    <strong>Цена: 25 000 ₽</strong>
-                </div>
-                
-                <div class="card">
-                    <h3>Полный сертификационный курс</h3>
-                    <p>3 дня • Глубокое погружение</p>
-                    <strong>Цена: 65 000 ₽</strong>
-                    <p style="margin-top:10px;">Включает материалы, сертификат и поддержку после обучения</p>
-                </div>
+        <div class="content-block section-intro-block">
+            <div class="section-header">
+                <i class="fas fa-graduation-cap"></i>
+                <h2>Обучение для мастеров</h2>
             </div>
+            <p class="section-desc-text">Освойте востребованную технику, увеличьте свой средний чек и создайте очередь из клиентов.</p>
+        </div>
 
-            <div style="text-align:center; margin-top: 60px;">
-                <a href="index.html#booking" class="btn btn-primary">Записаться на обучение</a>
+        <div class="content-block training-container">
+            <div class="training-grid">
+               
+                <div class="course-card">
+                    <div class="course-badge">Повышение</div>
+                    <h3>Интенсив Мастер-класс</h3>
+                    <p class="course-duration"><i class="fa-regular fa-clock"></i> 1 день • Теория + практика на 2 моделях</p>
+                    <div class="course-price">25 000 ₽</div>
+                    <a href="index.html#order" class="btn-secondary">Забронировать место</a>
+                </div>
+               
+                <div class="course-card premium-card">
+                    <div class="course-badge gold">Профи</div>
+                    <h3>Полный сертификационный курс</h3>
+                    <p class="course-duration"><i class="fa-regular fa-clock"></i> 3 дня • Глубокое погружение</p>
+                    <p class="course-details">Включает стартовый набор материалов, официальный именной сертификат и поддержку куратора после обучения.</p>
+                    <div class="course-price">65 000 ₽</div>
+                    <a href="index.html#order" class="btn-primary">Записаться на курс</a>
+                </div>
+
             </div>
-        </section>
+        </div>
 
         <footer>
-            <p><strong>Air Root</strong> — студия прикорневого объёма</p>
+            <div><i class="fa-solid fa-feather"></i> Авторская техника Air Root • 2026</div>
         </footer>
     </div>
 </body>
