@@ -1122,3 +1122,33 @@ h1, h2, h3, h4 {
         width: 100%;
     }
 }
+/* ==========================================================================
+   MAP CONTAINER
+   ========================================================================== */
+.map-container {
+    max-width: 1200px;
+    margin: 40px auto 0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-premium);
+    border: var(--border-gold-light);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .map-container iframe {
+        height: 320px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-container iframe {
+        height: 260px;
+    }
+}
