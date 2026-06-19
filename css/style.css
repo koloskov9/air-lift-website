@@ -1152,3 +1152,167 @@ h1, h2, h3, h4 {
         height: 260px;
     }
 }
+/* ==========================================================================
+   COURSES ACCORDION
+   ========================================================================== */
+.courses-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto 40px;
+}
+
+.accordion-item {
+    background: var(--white);
+    border: var(--border-gold-light);
+    border-radius: 16px;
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition-smooth);
+}
+
+.accordion-item:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 24px;
+    cursor: pointer;
+    gap: 15px;
+}
+
+.accordion-title-block {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex: 1;
+}
+
+.accordion-header h3 {
+    font-size: 22px;
+    margin: 0;
+}
+
+.accordion-price {
+    font-family: var(--font-title);
+    font-size: 24px;
+    color: var(--text-chocolate);
+    font-weight: 700;
+}
+
+.accordion-icon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion-icon i {
+    font-size: 18px;
+    color: var(--accent-gold);
+    transition: transform 0.3s ease;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.accordion-text {
+    padding: 0 24px 24px;
+}
+
+.accordion-text h4 {
+    font-size: 18px;
+    margin: 20px 0 10px;
+}
+
+.accordion-text h4:first-child {
+    margin-top: 0;
+}
+
+.course-modules,
+.course-requirements,
+.course-conditions {
+    list-style: none;
+    padding-left: 0;
+    margin: 0 0 15px;
+}
+
+.course-modules li,
+.course-requirements li,
+.course-conditions li {
+    font-size: 15px;
+    color: var(--text-gray);
+    margin-bottom: 8px;
+    padding-left: 0;
+}
+
+.accordion-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.accordion-buttons .btn-premium,
+.accordion-buttons .btn-secondary {
+    flex: 1;
+    min-width: 140px;
+}
+
+/* ==========================================================================
+   STUDENT REVIEWS
+   ========================================================================== */
+.student-reviews {
+    background: var(--bg-warm-white);
+    border-radius: 24px;
+    padding: 60px 30px;
+}
+
+/* ==========================================================================
+   FAQ ACCORDION
+   ========================================================================== */
+.training-faq {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.faq-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-accordion .accordion-header h4 {
+    font-size: 17px;
+    margin: 0;
+}
+
+/* ==========================================================================
+   MEDIA FOR ACCORDION
+   ========================================================================== */
+@media (max-width: 768px) {
+    .accordion-header {
+        flex-wrap: wrap;
+    }
+    .accordion-title-block {
+        flex: 1 1 100%;
+    }
+    .accordion-price {
+        font-size: 20px;
+    }
+    .accordion-buttons {
+        flex-direction: column;
+    }
+    .accordion-buttons .btn-premium,
+    .accordion-buttons .btn-secondary {
+        width: 100%;
+    }
+}
