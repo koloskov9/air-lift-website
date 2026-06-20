@@ -280,6 +280,7 @@ h1, h2, h3, h4 {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
 }
 
@@ -448,12 +449,14 @@ h1, h2, h3, h4 {
     box-shadow: var(--shadow-premium);
     border: var(--border-gold-light);
     height: 450px;
+    width: 100%;
 }
 
 .technique-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
 }
 
@@ -581,12 +584,14 @@ h1, h2, h3, h4 {
     overflow: hidden;
     margin-bottom: 10px;
     height: 280px;
+    width: 100%;
 }
 
-.ba_image img {
+.ba-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
 }
 
@@ -639,12 +644,14 @@ h1, h2, h3, h4 {
     box-shadow: var(--shadow-premium);
     border: var(--border-gold-light);
     height: 450px;
+    width: 100%;
 }
 
 .about-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     display: block;
 }
 
@@ -801,7 +808,7 @@ h1, h2, h3, h4 {
     min-width: 100px;
 }
 
-.social_btn i {
+.social-btn i {
     font-size: 20px;
     color: var(--accent-gold);
 }
@@ -1029,7 +1036,7 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
-   MEDIA QUERIES - TELEPHONE (ИСПРАВЛЕНО: FULL SCALE)
+   MEDIA QUERIES - TELEPHONE (ИСПРАВЛЕНО: ПРАВИЛЬНЫЙ SCALE ФОТО)
    ========================================================================== */
 
 @media (max-width: 992px) {
@@ -1044,13 +1051,13 @@ h1, h2, h3, h4 {
         order: 1 !important;
     }
     
-    /* HERO FULL SCALE - весь мастер.jpg виден */
+    /* HERO - правильный масштаб без обрезки */
     .hero-image-slot {
         order: 2 !important;
         max-width: 100% !important;
         height: auto !important;
-        aspect-ratio: 4 / 3 !important;
-        min-height: 320px !important;
+        min-height: 300px !important;
+        aspect-ratio: 16 / 10 !important;
     }
     
     .hero-buttons {
@@ -1062,12 +1069,12 @@ h1, h2, h3, h4 {
         grid-template-columns: 1fr !important;
     }
     
-    /* TECHNIQUE/ABOUT FULL SCALE */
+    /* TECHNIQUE/ABOUT - правильный масштаб */
     .technique-image,
     .about-image {
         height: auto !important;
-        aspect-ratio: 4 / 3 !important;
-        min-height: 350px !important;
+        min-height: 300px !important;
+        aspect-ratio: 16 / 10 !important;
     }
 }
 
@@ -1100,11 +1107,11 @@ h1, h2, h3, h4 {
         font-size: 26px !important;
     }
     
-    /* HERO FULL SCALE - 768px */
+    /* HERO 768px - правильный масштаб */
     .hero-image-slot {
         height: auto !important;
-        aspect-ratio: 4 / 3 !important;
-        min-height: 280px !important;
+        min-height: 260px !important;
+        aspect-ratio: 16 / 10 !important;
     }
     
     .hero-buttons {
@@ -1138,19 +1145,19 @@ h1, h2, h3, h4 {
         padding: 26px 20px !important;
     }
     
-    /* TECHNIQUE/ABOUT FULL SCALE - 768px */
+    /* TECHNIQUE/ABOUT 768px - правильный масштаб */
     .technique-image,
     .about-image {
         height: auto !important;
-        aspect-ratio: 4 / 3 !important;
-        min-height: 280px !important;
+        min-height: 260px !important;
+        aspect-ratio: 16 / 10 !important;
     }
     
-    /* BA FULL SCALE - 768px */
+    /* BA 768px - правильный масштаб */
     .ba-image {
         height: auto !important;
-        aspect-ratio: 4 / 3 !important;
-        min-height: 220px !important;
+        min-height: 200px !important;
+        aspect-ratio: 16 / 10 !important;
     }
     
     .contact-item {
@@ -1175,7 +1182,7 @@ h1, h2, h3, h4 {
         text-align: center !important;
     }
     
-    .social_buttons {
+    .social-buttons {
         flex-direction: row !important;
         justify-content: center !important;
         gap: 10px !important;
@@ -1216,7 +1223,7 @@ h1, h2, h3, h4 {
         font-size: 26px !important;
     }
     
-    .section_center_header h2 {
+    .section-center-header h2 {
         font-size: 24px !important;
     }
 }
@@ -1226,7 +1233,7 @@ h1, h2, h3, h4 {
         padding: 30px 12px !important;
     }
     
-    .hero_section {
+    .hero-section {
         padding: 40px 12px !important;
     }
     
@@ -1234,11 +1241,11 @@ h1, h2, h3, h4 {
         font-size: 22px !important;
     }
     
-    /* HERO FULL SCALE - 480px */
+    /* HERO 480px - правильный масштаб */
     .hero-image-slot {
         height: auto !important;
-        aspect-ratio: 4 / 3 !important;
-        min-height: 240px !important;
+        min-height: 220px !important;
+        aspect-ratio: 16 / 10 !important;
     }
     
     .hero-buttons .btn-premium,
@@ -1270,19 +1277,19 @@ h1, h2, h3, h4 {
         font-size: 13px !important;
     }
     
-    /* TECHNIQUE/ABOUT FULL SCALE - 480px */
+    /* TECHNIQUE/ABOUT 480px - правильный масштаб */
     .technique-image,
     .about-image {
         height: auto !important;
-        aspect-ratio: 4 / 3 !important;
-        min-height: 220px !important;
+        min-height: 200px !important;
+        aspect-ratio: 16 / 10 !important;
     }
     
-    /* BA FULL SCALE - 480px */
+    /* BA 480px - правильный масштаб */
     .ba-image {
         height: auto !important;
-        aspect-ratio: 4 / 3 !important;
-        min-height: 180px !important;
+        min-height: 160px !important;
+        aspect-ratio: 16 / 10 !important;
     }
     
     .social-btn {
@@ -1340,11 +1347,11 @@ h1, h2, h3, h4 {
         font-size: 20px !important;
     }
     
-    /* HERO FULL SCALE - 360px */
+    /* HERO 360px - правильный масштаб */
     .hero-image-slot {
         height: auto !important;
-        aspect-ratio: 4 / 3 !important;
-        min-height: 200px !important;
+        min-height: 180px !important;
+        aspect-ratio: 16 / 10 !important;
     }
     
     .social-btn {
