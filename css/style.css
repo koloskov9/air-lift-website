@@ -847,8 +847,9 @@ h1, h2, h3, h4 {
     outline: none;
     box-shadow: 0 0 0 3px rgba(201, 169, 97, 0.15);
     background: var(--white);
+.price-tag {
+    font-size: 24px;
 }
-
 .styled-luxury-form .btn-premium {
     width: 100%;
     margin-top: 10px;
@@ -1273,6 +1274,79 @@ h1, h2, h3, h4 {
     background: var(--bg-warm-white);
     border-radius: 24px;
     padding: 60px 30px;
+}
+
+.student-reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.student-review-card {
+    background: var(--white);
+    border: var(--border-gold-light);
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: var(--shadow-premium);
+    transition: var(--transition-smooth);
+}
+
+.student-review-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-hover);
+}
+
+.student-review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.student-avatar {
+    width: 44px;
+    height: 44px;
+    background: var(--pastel-pink);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-accent);
+    font-weight: 600;
+    color: var(--text-chocolate);
+}
+
+.student-name {
+    font-family: var(--font-accent);
+    font-weight: 600;
+    color: var(--text-chocolate);
+    font-size: 16px;
+}
+
+.student-course {
+    font-size: 13px;
+    color: var(--accent-gold);
+    font-family: var(--font-accent);
+    margin-bottom: 10px;
+}
+
+.student-review-text {
+    font-size: 15px;
+    color: var(--text-gray);
+    line-height: 1.6;
+}
+
+.student-review-rating {
+    display: flex;
+    gap: 4px;
+    margin-top: 12px;
+}
+
+.student-review-rating i {
+    color: var(--accent-gold);
+    font-size: 14px;
 }
 
 /* ==========================================================================
