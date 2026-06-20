@@ -216,7 +216,6 @@ h1, h2, h3, h4 {
     gap: 15px;
     margin-bottom: 15px;
     flex-wrap: wrap;
-    justify-content: flex-start;
 }
 
 .hero-buttons .btn-premium {
@@ -781,57 +780,53 @@ h1, h2, h3, h4 {
 .social-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     gap: 8px;
-    padding: 10px 20px;
-    border-radius: 14px;
+    padding: 10px 14px;
+    border-radius: 10px;
     font-family: var(--font-accent);
     font-size: 13px;
     font-weight: 500;
     text-decoration: none;
     transition: var(--transition-smooth);
-    border: 1px solid transparent;
+    border: 1px solid var(--accent-gold);
+    background: var(--white);
     box-shadow: var(--shadow-premium);
-    color: var(--white);
+    color: var(--text-chocolate);
     cursor: pointer;
-    min-width: 120px;
+    min-width: 100px;
 }
 
 .social-btn i {
-    font-size: 16px;
+    font-size: 20px;
+    color: var(--accent-gold);
 }
 
 .social-btn:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-hover);
+    background: var(--pastel-pink);
+    border-color: var(--accent-bronze);
 }
 
-.social-btn.telegram {
-    background: linear-gradient(135deg, #24A1DE, #0E8EC5);
-}
-
-.social-btn.whatsapp {
-    background: linear-gradient(135deg, #25D366, #128C7E);
-}
-
-.social-btn.instagram {
-    background: linear-gradient(135deg, #E4405F, #D4AF37);
+.social-btn:hover i {
+    color: var(--accent-bronze);
 }
 
 .blocked-note {
     position: absolute;
-    top: -6px;
-    right: -6px;
-    background: #FF4444;
+    top: -4px;
+    right: -4px;
+    background: var(--text-chocolate);
     color: var(--white);
-    font-size: 10px;
-    width: 18px;
-    height: 18px;
+    font-size: 8px;
+    width: 14px;
+    height: 14px;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 2px solid var(--white);
-    box-shadow: 0 2px 6px rgba(255, 68, 68, 0.3);
+    border: 1px solid var(--white);
     cursor: help;
 }
 
@@ -844,6 +839,9 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
+/* ==========================================================================
+   MAP CONTAINER
+   ========================================================================== */
 .map-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -1128,8 +1126,12 @@ h1, h2, h3, h4 {
     }
     
     .social-btn {
-        min-width: 110px !important;
-        padding: 12px 16px !important;
+        min-width: 90px !important;
+        padding: 8px 12px !important;
+    }
+    
+    .social-btn i {
+        font-size: 18px !important;
     }
     
     .map-container {
@@ -1219,9 +1221,19 @@ h1, h2, h3, h4 {
     }
     
     .social-btn {
-        min-width: 95px !important;
-        padding: 10px 14px !important;
+        min-width: 80px !important;
+        padding: 8px 10px !important;
         font-size: 12px !important;
+    }
+    
+    .social-btn i {
+        font-size: 16px !important;
+    }
+    
+    .blocked-note {
+        width: 12px !important;
+        height: 12px !important;
+        font-size: 7px !important;
     }
     
     .map-container {
@@ -1268,7 +1280,7 @@ h1, h2, h3, h4 {
     }
     
     .social-btn {
-        min-width: 85px !important;
+        min-width: 75px !important;
         font-size: 11px !important;
     }
     
