@@ -676,101 +676,31 @@ h1, h2, h3, h4 {
    CONTACTS SECTION
    ========================================================================== */
 .contacts-section {
-    background: var(--bg-warm-white);
-}
-
-.contacts-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 24px;
-}
-
-.contact-item {
-    background: var(--white);
-    border: var(--border-gold-light);
-    border-radius: 16px;
-    padding: 24px;
+    background: linear-gradient(180deg, var(--white) 0%, var(--pastel-pink) 100%);
+    border-radius: 28px;
+    padding: 70px 35px;
     box-shadow: var(--shadow-premium);
-    display: flex;
-    gap: 15px;
-    align-items: flex-start;
+    overflow-x: hidden;
+    width: 100%;
 }
 
-.contact-icon {
-    width: 44px;
-    height: 44px;
-    background: var(--bg-main);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+@media (max-width: 768px) {
+    .contacts-section {
+        padding: 40px 15px;
+    }
 }
 
-.contact-icon i {
-    font-size: 18px;
+@media (max-width: 480px) {
+    .contacts-section {
+        padding: 30px 12px;
+    }
 }
 
-.contact-text h3 {
-    font-size: 18px;
-    margin-bottom: 6px;
+@media (max-width: 360px) {
+    .contacts-section {
+        padding: 24px 10px;
+    }
 }
-
-.contact-text p {
-    font-size: 15px;
-    color: var(--text-gray);
-}
-
-.contact-text a {
-    color: var(--text-chocolate);
-    text-decoration: none;
-}
-
-.contact-text a:hover {
-    color: var(--accent-gold);
-}
-
-.social-item {
-    flex-direction: column;
-}
-
-.social-buttons {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-    margin-top: 10px;
-}
-
-.social-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 10px 16px;
-    border-radius: 12px;
-    color: var(--white);
-    text-decoration: none;
-    font-family: var(--font-accent);
-    font-size: 14px;
-    font-weight: 500;
-    transition: var(--transition-smooth);
-}
-
-.social-btn.instagram {
-    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
-}
-
-.social-btn.telegram {
-    background: #0088cc;
-}
-
-.social-btn.whatsapp {
-    background: #25D366;
-}
-
-.social-btn:hover {
-    transform: translateY(-2px);
-    opacity: 0.95;
-}
-
 /* ==========================================================================
    BOOKING FORM
    ========================================================================== */
