@@ -769,6 +769,10 @@ h1, h2, h3, h4 {
     text-align: center;
 }
 
+/* ==========================================================================
+   SOCIAL BUTTONS - MINIMALIST STYLE
+   ========================================================================== */
+
 .social-buttons {
     display: flex;
     gap: 12px;
@@ -813,6 +817,43 @@ h1, h2, h3, h4 {
     color: var(--accent-bronze);
 }
 
+/* Telegram - минималистичный */
+.social-btn.telegram {
+    background: var(--white);
+}
+
+.social-btn.telegram i {
+    color: var(--accent-gold);
+}
+
+/* WhatsApp - минималистичный */
+.social-btn.whatsapp {
+    background: var(--white);
+}
+
+.social-btn.whatsapp i {
+    color: var(--accent-gold);
+}
+
+/* Instagram - минималистичный */
+.social-btn.instagram {
+    background: var(--white);
+}
+
+.social-btn.instagram i {
+    color: var(--accent-gold);
+}
+
+/* MAX - минималистичный (НОВОЕ) */
+.social-btn.max {
+    background: var(--white);
+}
+
+.social-btn.max i {
+    color: var(--accent-gold);
+}
+
+/* Blocked note - уменьшенный */
 .blocked-note {
     position: absolute;
     top: -4px;
