@@ -583,7 +583,7 @@ h1, h2, h3, h4 {
     height: 280px;
 }
 
-.ba-image img {
+.ba_image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -801,7 +801,7 @@ h1, h2, h3, h4 {
     min-width: 100px;
 }
 
-.social-btn i {
+.social_btn i {
     font-size: 20px;
     color: var(--accent-gold);
 }
@@ -1029,7 +1029,7 @@ h1, h2, h3, h4 {
 }
 
 /* ==========================================================================
-   MEDIA QUERIES - TELEPHONE
+   MEDIA QUERIES - TELEPHONE (ИСПРАВЛЕНО: FULL SCALE)
    ========================================================================== */
 
 @media (max-width: 992px) {
@@ -1044,10 +1044,13 @@ h1, h2, h3, h4 {
         order: 1 !important;
     }
     
+    /* HERO FULL SCALE - весь мастер.jpg виден */
     .hero-image-slot {
         order: 2 !important;
         max-width: 100% !important;
-        height: 350px !important;
+        height: auto !important;
+        aspect-ratio: 4 / 3 !important;
+        min-height: 320px !important;
     }
     
     .hero-buttons {
@@ -1059,9 +1062,12 @@ h1, h2, h3, h4 {
         grid-template-columns: 1fr !important;
     }
     
+    /* TECHNIQUE/ABOUT FULL SCALE */
     .technique-image,
     .about-image {
-        height: 400px !important;
+        height: auto !important;
+        aspect-ratio: 4 / 3 !important;
+        min-height: 350px !important;
     }
 }
 
@@ -1094,8 +1100,11 @@ h1, h2, h3, h4 {
         font-size: 26px !important;
     }
     
+    /* HERO FULL SCALE - 768px */
     .hero-image-slot {
-        height: 300px !important;
+        height: auto !important;
+        aspect-ratio: 4 / 3 !important;
+        min-height: 280px !important;
     }
     
     .hero-buttons {
@@ -1129,13 +1138,19 @@ h1, h2, h3, h4 {
         padding: 26px 20px !important;
     }
     
+    /* TECHNIQUE/ABOUT FULL SCALE - 768px */
     .technique-image,
     .about-image {
-        height: 280px !important;
+        height: auto !important;
+        aspect-ratio: 4 / 3 !important;
+        min-height: 280px !important;
     }
     
+    /* BA FULL SCALE - 768px */
     .ba-image {
-        height: 220px !important;
+        height: auto !important;
+        aspect-ratio: 4 / 3 !important;
+        min-height: 220px !important;
     }
     
     .contact-item {
@@ -1160,7 +1175,7 @@ h1, h2, h3, h4 {
         text-align: center !important;
     }
     
-    .social-buttons {
+    .social_buttons {
         flex-direction: row !important;
         justify-content: center !important;
         gap: 10px !important;
@@ -1201,7 +1216,7 @@ h1, h2, h3, h4 {
         font-size: 26px !important;
     }
     
-    .section-center-header h2 {
+    .section_center_header h2 {
         font-size: 24px !important;
     }
 }
@@ -1211,7 +1226,7 @@ h1, h2, h3, h4 {
         padding: 30px 12px !important;
     }
     
-    .hero-section {
+    .hero_section {
         padding: 40px 12px !important;
     }
     
@@ -1219,8 +1234,11 @@ h1, h2, h3, h4 {
         font-size: 22px !important;
     }
     
+    /* HERO FULL SCALE - 480px */
     .hero-image-slot {
-        height: 240px !important;
+        height: auto !important;
+        aspect-ratio: 4 / 3 !important;
+        min-height: 240px !important;
     }
     
     .hero-buttons .btn-premium,
@@ -1252,13 +1270,19 @@ h1, h2, h3, h4 {
         font-size: 13px !important;
     }
     
+    /* TECHNIQUE/ABOUT FULL SCALE - 480px */
     .technique-image,
     .about-image {
-        height: 220px !important;
+        height: auto !important;
+        aspect-ratio: 4 / 3 !important;
+        min-height: 220px !important;
     }
     
+    /* BA FULL SCALE - 480px */
     .ba-image {
-        height: 180px !important;
+        height: auto !important;
+        aspect-ratio: 4 / 3 !important;
+        min-height: 180px !important;
     }
     
     .social-btn {
@@ -1316,8 +1340,11 @@ h1, h2, h3, h4 {
         font-size: 20px !important;
     }
     
+    /* HERO FULL SCALE - 360px */
     .hero-image-slot {
-        height: 200px !important;
+        height: auto !important;
+        aspect-ratio: 4 / 3 !important;
+        min-height: 200px !important;
     }
     
     .social-btn {
